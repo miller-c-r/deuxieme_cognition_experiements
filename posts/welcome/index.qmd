@@ -1,0 +1,12 @@
+---
+title: "A Weekly Cognitive Psychology Blog"
+author: "C Miller"
+date: "2023-8-25"
+categories: [news]
+---
+
+### Weekly Posts Cognitive Psychology Experiments 
+
+#### Using jsPsych
+
+#### R studio
