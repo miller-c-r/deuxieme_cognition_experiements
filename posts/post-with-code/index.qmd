@@ -1,7 +1,0 @@
----
-title: "Week Number One"
-author: "C Miller"
-date: "2023-09-07"
-categories: [code]
-image: ""
----

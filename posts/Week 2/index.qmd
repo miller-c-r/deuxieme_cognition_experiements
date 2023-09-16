@@ -1,0 +1,12 @@
+---
+title: "A Weekly Cognitive Psychology Blog: Week Number Two"
+author: "C Miller"
+date: "2023-09-13"
+
+---
+
+
+### HTML and Javascript interactivity
+
+
+##### Using Javascript to Interact with Users Using Color-coded Buttons
