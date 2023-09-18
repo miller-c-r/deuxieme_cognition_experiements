@@ -2,10 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/welcome/index.html",
       "/posts/Week 3/index.html",
       "/posts/Week 2/index.html",
-      "/posts/Week 1/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Week 1/index.html"
     ]
   }
 ]
