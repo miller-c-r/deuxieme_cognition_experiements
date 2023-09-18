@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="C Miller">
-<meta name="dcterms.date" content="2023-09-13">
+<meta name="dcterms.date" content="2023-09-07">
 
-<title>Cognitive Psychology Experiments Using jsPsych - A Weekly Cognitive Psychology Blog: Week Number Two</title>
+<title>Cognitive Psychology Experiments Using jsPsych - A Weekly Cognitive Psychology Blog: Week Number One</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Weekly Cognitive Psychology Blog: Week Number Two</h1>
+      <h1 class="title">A Weekly Cognitive Psychology Blog: Week Number One</h1>
                       </div>
   </div>
     
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 13, 2023</p>
+        <p class="date">September 7, 2023</p>
       </div>
     </div>
     
@@ -135,101 +135,15 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#html-and-javascript-interactivity" id="toc-html-and-javascript-interactivity" class="nav-link active" data-scroll-target="#html-and-javascript-interactivity">HTML and Javascript interactivity</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<section id="html-and-javascript-interactivity" class="level3">
-<h3 class="anchored" data-anchor-id="html-and-javascript-interactivity">HTML and Javascript interactivity</h3>
-<section id="using-javascript-to-interact-with-users-using-color-coded-buttons" class="level5">
-<h5 class="anchored" data-anchor-id="using-javascript-to-interact-with-users-using-color-coded-buttons">Using Javascript to Interact with Users Using Color-coded Buttons</h5>
-&lt;!DOCTYPE html&gt;
 
 
-<p>Using buttons and onclick functions to change the display</p>
-
-
-<h1 id="behavior">
-Testing Button Functions for Behavioral Experiments
-</h1>
-<p>
-Click on a Button Below to Change Text Color or Background
-</p>
-<p><button onclick="colorReset()">RESET</button></p>
-<p><button onclick="colorBlack()">Black</button></p>
-<p><button onclick="colorWhite()">White</button></p>
-<p><button onclick="colorPink()">Pink</button></p>
-<p><button onclick="colorPurple()">Purple</button></p>
-<p><button onclick="colorGreen()">Green</button></p>
-<p><button onclick="colorBlue()">Blue</button></p>
-<script>
-      
-      function colorBlack() {
-        document.body.style.background="black";
-      
-        
-      }
-      
-      
-      
-        function colorWhite() {
-        document.getElementById("behavior").innerHTML = "<span style='color: white;'>Click to Change My Color</span>";
-        
-      
-      }
-    
-      
-      
-        function colorPink() {
-        document.getElementById("behavior").innerHTML = "<span style='color: pink;'>Click to Change My Color</span>";
-        
-      
-      }
-      
-      
-      function colorPurple() {
-        document.getElementById("behavior").innerHTML = "<span style='color: purple;'>Click to Change My Color</span>";
-        
-      
-      }
-      
-      function colorGreen() {
-        document.getElementById("behavior").innerHTML = "<span style='color: green;'>Click to Change My Color</span>";
-        
-      
-      }
-      
-      function colorBlue() {
-        document.getElementById("behavior").innerHTML = "<span style='color: blue;'>Click to Change My Color</span>";
-        
-      
-      }
-
-
-    function colorReset() {
-        document.body.style.background="white";
-      
-        
-      }
-    
-    </script>
-
-
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

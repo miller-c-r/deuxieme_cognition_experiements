@@ -1,5 +1,10 @@
 ---
 title: "A Weekly Cognitive Psychology Blog: Week Number Two"
+format:
+  html:
+    toc: true
+    code-fold: true
+    html-math-method: katex
 author: "C Miller"
 date: "2023-09-13"
 
@@ -10,3 +15,96 @@ date: "2023-09-13"
 
 
 ##### Using Javascript to Interact with Users Using Color-coded Buttons
+
+
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    Using buttons and onclick functions to change the display
+  
+  </head>
+  
+  
+  <body>
+  
+  <h1 id="behavior"> Testing Button Functions for Behavioral Experiments</h1>
+    
+    <p>
+      Click on a Button Below to Change Text Color or Background
+    </p>
+    
+    <button onclick="colorReset()">RESET</button>
+    
+    <button onclick="colorBlack()">Black</button>
+    
+    <button onclick="colorWhite()">White</button>
+    
+    <button onclick="colorPink()">Pink</button>
+    
+    <button onclick="colorPurple()">Purple</button>
+    
+    <button onclick="colorGreen()">Green</button>
+    
+    <button onclick="colorBlue()">Blue</button>
+    
+    
+    <script>
+      
+      function colorBlack() {
+        document.body.style.background="black";
+      
+        
+      }
+      
+      
+      
+        function colorWhite() {
+        document.getElementById("behavior").innerHTML = "<span style='color: white;'>Click to Change My Color</span>";
+        
+      
+      }
+    
+      
+      
+        function colorPink() {
+        document.getElementById("behavior").innerHTML = "<span style='color: pink;'>Click to Change My Color</span>";
+        
+      
+      }
+      
+      
+      function colorPurple() {
+        document.getElementById("behavior").innerHTML = "<span style='color: purple;'>Click to Change My Color</span>";
+        
+      
+      }
+      
+      function colorGreen() {
+        document.getElementById("behavior").innerHTML = "<span style='color: green;'>Click to Change My Color</span>";
+        
+      
+      }
+      
+      function colorBlue() {
+        document.getElementById("behavior").innerHTML = "<span style='color: blue;'>Click to Change My Color</span>";
+        
+      
+      }
+
+
+    function colorReset() {
+        document.body.style.background="white";
+      
+        
+      }
+    
+    </script>
+    
+  
+  </body>
+  
+</html>
+
+
