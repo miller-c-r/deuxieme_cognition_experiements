@@ -1,12 +1,8 @@
 ---
 title: "A Weekly Cognitive Psychology Blog: Week Number Two"
-format:
-  html:
-    toc: true
-    code-fold: true
-    html-math-method: katex
 author: "C Miller"
 date: "2023-09-13"
+image: "ap_5_also.PNG"
 
 ---
 
