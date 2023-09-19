@@ -20,6 +20,37 @@ image: "ap_5_also.PNG"
   <head>
     Using buttons and onclick functions to change the display
   
+    <style>
+      .js-pink-button {
+      
+        border: none;
+        background-color: pink;
+        color: white;
+        
+      }
+      
+      .js-purple-button {
+      
+        border: none;
+        background-color: purple;
+        color: white;
+      }
+      
+      .js-green-button {
+      
+        border: none;
+        background-color: green;
+        color: white;
+      }
+      
+      .js-blue-button {
+      
+        border: none;
+        background-color: blue;
+        color: white;
+      }  
+
+    </style>
   </head>
   
   
@@ -37,13 +68,18 @@ image: "ap_5_also.PNG"
     
     <button onclick="colorWhite()">White</button>
     
-    <button onclick="colorPink()">Pink</button>
+    <button onclick="colorPink();"  
+      class="js-pink-button">Pink</button>
     
-    <button onclick="colorPurple()">Purple</button>
     
-    <button onclick="colorGreen()">Green</button>
+    <button onclick="colorPurple();"
+      class="js-purple-button">Purple</button>
     
-    <button onclick="colorBlue()">Blue</button>
+    <button onclick="colorGreen();"
+      class="js-green-button">Green</button>
+    
+    <button onclick="colorBlue();"
+      class="js-blue-button">Blue</button>
     
     
     <script>

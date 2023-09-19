@@ -150,6 +150,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Using buttons and onclick functions to change the display</p>
+<style>
+      .js-pink-button {
+      
+        border: none;
+        background-color: pink;
+        color: white;
+        
+      }
+      
+      .js-purple-button {
+      
+        border: none;
+        background-color: purple;
+        color: white;
+      }
+      
+      .js-green-button {
+      
+        border: none;
+        background-color: green;
+        color: white;
+      }
+      
+      .js-blue-button {
+      
+        border: none;
+        background-color: blue;
+        color: white;
+      }  
+
+    </style>
 
 
 <h1 id="behavior">
@@ -161,10 +192,10 @@ Click on a Button Below to Change Text Color or Background
 <p><button onclick="colorReset()">RESET</button></p>
 <p><button onclick="colorBlack()">Black</button></p>
 <p><button onclick="colorWhite()">White</button></p>
-<p><button onclick="colorPink()">Pink</button></p>
-<p><button onclick="colorPurple()">Purple</button></p>
-<p><button onclick="colorGreen()">Green</button></p>
-<p><button onclick="colorBlue()">Blue</button></p>
+<p><button onclick="colorPink();" class="js-pink-button">Pink</button></p>
+<p><button onclick="colorPurple();" class="js-purple-button">Purple</button></p>
+<p><button onclick="colorGreen();" class="js-green-button">Green</button></p>
+<p><button onclick="colorBlue();" class="js-blue-button">Blue</button></p>
 <script>
       
       function colorBlack() {

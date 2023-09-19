@@ -25,13 +25,13 @@
     "href": "posts/Week 2/index.html",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Two",
     "section": "",
-    "text": "HTML and Javascript interactivity\n\nUsing Javascript to Interact with Users Using Color-coded Buttons\n&lt;!DOCTYPE html&gt;\n\n\nUsing buttons and onclick functions to change the display\n\n\n\nTesting Button Functions for Behavioral Experiments\n\n\nClick on a Button Below to Change Text Color or Background\n\nRESET\nBlack\nWhite\nPink\nPurple\nGreen\nBlue"
+    "text": "HTML and Javascript interactivity\n\nUsing Javascript to Interact with Users Using Color-coded Buttons\n&lt;!DOCTYPE html&gt;\n\n\nUsing buttons and onclick functions to change the display\n\n\n\n\nTesting Button Functions for Behavioral Experiments\n\n\nClick on a Button Below to Change Text Color or Background\n\nRESET\nBlack\nWhite\nPink\nPurple\nGreen\nBlue"
   },
   {
     "objectID": "posts/Week 3/index.html",
     "href": "posts/Week 3/index.html",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Three",
     "section": "",
-    "text": "An Introduction to jsPsych\n\nA Reaction Iime Task Demo"
+    "text": "An Introduction to jsPsych\n\nA Reaction Iime Task\n&lt;!DOCTYPE html&gt;\n\n\n\nMy experiment"
   }
 ]
