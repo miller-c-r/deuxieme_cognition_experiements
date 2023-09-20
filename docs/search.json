@@ -25,7 +25,7 @@
     "href": "posts/Week 2/index.html",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Two",
     "section": "",
-    "text": "HTML and Javascript interactivity\n\nUsing Javascript to Interact with Users Using Color-coded Buttons\n&lt;!DOCTYPE html&gt;\n\n\nUsing buttons and onclick functions to change the display\n\n\n\n\nTesting Button Functions for Behavioral Experiments\n\n\nClick on a Button Below to Change Text Color or Background\n\nRESET\nBlack\nWhite\nPink\nPurple\nGreen\nBlue"
+    "text": "HTML and Javascript interactivity\n\nUsing Javascript to Interact with Users Using Color-coded Buttons\n\n\n\n  \n  \n    Using buttons and onclick functions to change the display\n  \n    \n  \n  \n  \n  \n  \n   Testing Button Functions for Behavioral Experiments\n    \n    \n      Click on a Button Below to Change Text Color or Background\n    \n    \n    RESET\n    \n    Black\n    \n    White\n    \n    Pink\n    \n    \n    Purple\n    \n    Green\n    \n    Blue"
   },
   {
     "objectID": "posts/Week 3/index.html",
@@ -33,5 +33,12 @@
     "title": "A Weekly Cognitive Psychology Blog: Week Number Three",
     "section": "",
     "text": "An Introduction to jsPsych\n\nA Reaction Iime Task\n&lt;!DOCTYPE html&gt;\n\n\n\nMy experiment"
+  },
+  {
+    "objectID": "posts/Week 2.5/index.html",
+    "href": "posts/Week 2.5/index.html",
+    "title": "Rock, Paper, Scissors",
+    "section": "",
+    "text": "Rock Paper Scissors\n  \n  \n\n    \n      Rock Paper Scissors\n      Rock  \n        Paper\n        Scissors \n        \n        console.log(computerMove);"
   }
 ]
