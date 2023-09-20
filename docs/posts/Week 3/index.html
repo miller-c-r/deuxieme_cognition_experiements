@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="C Miller">
-<meta name="dcterms.date" content="2023-09-20">
+<meta name="dcterms.date" content="2023-09-21">
 
 <title>Cognitive Psychology Experiments Using jsPsych - A Weekly Cognitive Psychology Blog: Week Number Three</title>
 <style>
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 20, 2023</p>
+        <p class="date">September 21, 2023</p>
       </div>
     </div>
     
@@ -144,25 +144,25 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="an-introduction-to-jspsych" class="level3">
 <h3 class="anchored" data-anchor-id="an-introduction-to-jspsych">An Introduction to jsPsych</h3>
-<section id="a-reaction-iime-task" class="level4">
-<h4 class="anchored" data-anchor-id="a-reaction-iime-task">A Reaction Iime Task</h4>
-&lt;!DOCTYPE html&gt;
+<section id="a-reaction-time-task" class="level4">
+<h4 class="anchored" data-anchor-id="a-reaction-time-task">A Reaction Time Task</h4>
 
 
-<title>
-My experiment
-</title>
-<script src="https://unpkg.com/jspsych@7.3.3"></script>
-<script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
-<script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
-<script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
-<link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css">
+  
+    <title>My experiment</title>
+    <script src="https://unpkg.com/jspsych@7.3.3"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+    <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+  
+  
+  <script>
 
-
-
-<script>
-
-    /* initialize jsPsych */
     var jsPsych = initJsPsych({
       on_finish: function() {
         jsPsych.data.displayData();
@@ -171,22 +171,22 @@ My experiment
 
     /* create timeline */
     var timeline = [];
-
-    /* preload images */
+    
+    
     var preload = {
       type: jsPsychPreload,
       images: ['img/blue.png', 'img/orange.png']
     };
     timeline.push(preload);
-
-    /* define welcome message trial */
+    
+    
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: "Welcome to the experiment. Press any key to begin."
     };
     timeline.push(welcome);
-
-    /* define instructions trial */
+    
+    
     var instructions = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: `
@@ -203,17 +203,18 @@ My experiment
         </div>
         <p>Press any key to begin.</p>
       `,
-      post_trial_gap: 2000
+    
+    
+    post_trial_gap: 2000
     };
     timeline.push(instructions);
-
-    /* define trial stimuli array for timeline variables */
+    
     var test_stimuli = [
       { stimulus: "img/blue.png",  correct_response: 'f'},
       { stimulus: "img/orange.png",  correct_response: 'j'}
     ];
-
-    /* define fixation and test trials */
+    
+    
     var fixation = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: '<div style="font-size:60px;">+</div>',
@@ -239,8 +240,8 @@ My experiment
       }
     };
 
-    /* define test procedure */
-    var test_procedure = {
+
+  var test_procedure = {
       timeline: [fixation, test],
       timeline_variables: test_stimuli,
       repetitions: 5,
@@ -248,8 +249,9 @@ My experiment
     };
     timeline.push(test_procedure);
 
-    /* define debrief */
-    var debrief_block = {
+
+
+  var debrief_block = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: function() {
 
@@ -265,11 +267,18 @@ My experiment
       }
     };
     timeline.push(debrief_block);
-
-    /* start the experiment */
+    
+    
+    
     jsPsych.run(timeline);
 
   </script>
+  
+  
+
+
+
+
 
 
 
