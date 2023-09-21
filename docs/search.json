@@ -4,12 +4,12 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "C Miller’s Student Blog\n\nCUNY Brooklyn College"
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Cognitive Psychology Experiments Using jsPsych",
+    "title": "A Weekly Cognitive Psychology Blog",
     "section": "",
     "text": "Weekly Posts Cognitive Psychology Experiments\n\nUsing jsPsych\n\n\nR studio"
   },
@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Cognitive Psychology Experiments Using jsPsych",
     "section": "",
-    "text": "Weekly Posts Cognitive Psychology Experiments\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nRock, Paper, Scissors\n\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number One\n\n\n\n\n\n\n\n\n\n\n\n\nSep 7, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
+    "text": "Note\n\n\n\nC Miller’s Student Blog\n\n\n\n\n\n\n\n\nExpand to Learn About the Images Below\n\n\n\n\n\nWeekly Blog Posts May Include Photos of Star Wars Rebels Inventory Droid AP-5\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe AP-5 Inventory Droid does not always get along with Astromech Series Droid Chopper\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nA Slide Deck of Droid AP-5\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog\n\n\n\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week 2/index.html",
@@ -32,7 +32,7 @@
     "href": "posts/Week 3/index.html",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Three",
     "section": "",
-    "text": "An Introduction to jsPsych\n\nA Reaction Time Task\n\n\n\n  \n  \n  \n\n    \n    \n    Click to View the Experiment"
+    "text": "An Introduction to jsPsych\n\nA Reaction Time Task"
   },
   {
     "objectID": "posts/Week 2.5/index.html",
@@ -40,5 +40,103 @@
     "title": "Rock, Paper, Scissors",
     "section": "",
     "text": "Rock Paper Scissors\n  \n  \n\n    \n      Rock Paper Scissors\n      Rock  \n        Paper\n        Scissors \n        \n        console.log(computerMove);"
+  },
+  {
+    "objectID": "posts/Week 1/index.html",
+    "href": "posts/Week 1/index.html",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number One",
+    "section": "",
+    "text": "This will be a jsPsych blog"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#biography",
+    "href": "posts/Week 1/index.html#biography",
+    "title": "A Slide Deck of Droid AP-5",
+    "section": "Biography",
+    "text": "Biography"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#background",
+    "href": "posts/Week 1/index.html#background",
+    "title": "Weekly Cognitive Psychology Blog: A Slide Deck",
+    "section": "Background",
+    "text": "Background"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#experiment-1",
+    "href": "posts/Week 1/index.html#experiment-1",
+    "title": "Weekly Cognitive Psychology Blog: A Slide Deck",
+    "section": "Experiment 1",
+    "text": "Experiment 1\nReaction Trial"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#experiment-2",
+    "href": "posts/Week 1/index.html#experiment-2",
+    "title": "Weekly Cognitive Psychology Blog: A Slide Deck",
+    "section": "Experiment 2",
+    "text": "Experiment 2\nAttention Trial"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#experiment-3",
+    "href": "posts/Week 1/index.html#experiment-3",
+    "title": "Weekly Cognitive Psychology Blog: A Slide Deck",
+    "section": "Experiment 3",
+    "text": "Experiment 3"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#experiment-4",
+    "href": "posts/Week 1/index.html#experiment-4",
+    "title": "Weekly Cognitive Psychology Blog: A Slide Deck",
+    "section": "Experiment 4",
+    "text": "Experiment 4"
+  },
+  {
+    "objectID": "premiere_experiment.html",
+    "href": "premiere_experiment.html",
+    "title": "Cognitive Psychology Experiments Using jsPsych",
+    "section": "",
+    "text": "title: “Weekly Cognitive Psychology Blog: A Slide Deck”\nimage: “ap_5_capture.PNG”\nformat:\nrevealjs:\neditor: visual\nexecute:\necho: false"
+  },
+  {
+    "objectID": "premiere_experiment.html#biography",
+    "href": "premiere_experiment.html#biography",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Biography",
+    "text": "Biography"
+  },
+  {
+    "objectID": "premiere_experiment.html#background",
+    "href": "premiere_experiment.html#background",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Background",
+    "text": "Background"
+  },
+  {
+    "objectID": "premiere_experiment.html#experiment-1",
+    "href": "premiere_experiment.html#experiment-1",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Experiment 1",
+    "text": "Experiment 1\nReaction Trial"
+  },
+  {
+    "objectID": "premiere_experiment.html#experiment-2",
+    "href": "premiere_experiment.html#experiment-2",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Experiment 2",
+    "text": "Experiment 2\nAttention Trial"
+  },
+  {
+    "objectID": "premiere_experiment.html#experiment-3",
+    "href": "premiere_experiment.html#experiment-3",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Experiment 3",
+    "text": "Experiment 3"
+  },
+  {
+    "objectID": "premiere_experiment.html#experiment-4",
+    "href": "premiere_experiment.html#experiment-4",
+    "title": "EXPERIMENTS: A Slide Deck",
+    "section": "Experiment 4",
+    "text": "Experiment 4"
   }
 ]

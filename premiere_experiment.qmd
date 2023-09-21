@@ -1,0 +1,25 @@
+---
+title: "EXPERIMENTS: A Slide Deck"
+format:
+  revealjs:
+    theme: moon
+editor: visual
+execute:
+  echo: false
+---
+
+## Biography
+
+## Background
+
+## Experiment 1
+
+#### Reaction Trial
+
+## Experiment 2
+
+#### Attention Trial
+
+## Experiment 3
+
+## Experiment 4

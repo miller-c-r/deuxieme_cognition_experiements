@@ -2,12 +2,10 @@
 title: "A Weekly Cognitive Psychology Blog"
 author: "C Miller"
 date: "2023-8-25"
-image: "ap_5_capture.PNG"
-
-
+image: "ap5_easy.PNG"
 ---
 
-### Weekly Posts Cognitive Psychology Experiments 
+### Weekly Posts Cognitive Psychology Experiments
 
 #### Using jsPsych
 

@@ -10,3 +10,17 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
+
+::: callout-note
+C Miller's Student Blog
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand to Learn About the Images Below
+
+Weekly Blog Posts May Include Photos of Star Wars Rebels Inventory Droid AP-5
+:::
+
+::: callout-tip
+The AP-5 Inventory Droid does not always get along with Astromech Series Droid Chopper
+:::
