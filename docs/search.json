@@ -25,7 +25,7 @@
     "href": "posts/Week 2/index.html",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Two",
     "section": "",
-    "text": "HTML and Javascript interactivity\n\nUsing Javascript to Interact with Users Using Color-coded Buttons\n\n\n\n  \n  \n    Using buttons and onclick functions to change the display\n  \n    \n  \n  \n  \n  \n  \n   Testing Button Functions for Behavioral Experiments\n    \n    \n      Click on a Button Below to Change Text Color or Background\n    \n    \n    RESET\n    \n    Black\n    \n    White\n    \n    Pink\n    \n    \n    Purple\n    \n    Green\n    \n    Blue"
+    "text": "Using buttons and onclick functions to change the display\n  \n    \n  \n  \n  \n  \n  \n  \n    \n    \n      Click on a Button Below to Change Text Color or Background\n    \n    \n    RESET\n    \n    Black\n    \n    White\n    \n    Pink\n    \n    \n    Purple\n    \n    Green\n    \n    Blue"
   },
   {
     "objectID": "posts/Week 3/index.html",
@@ -116,7 +116,7 @@
     "href": "premiere_experiment.html#experiment-1",
     "title": "EXPERIMENTS: A Slide Deck",
     "section": "Experiment 1",
-    "text": "Experiment 1\nReaction Trial"
+    "text": "Experiment 1\nReaction Trial\nReaction Trial"
   },
   {
     "objectID": "premiere_experiment.html#experiment-2",
@@ -159,5 +159,19 @@
     "title": "Topics in Cognitive Psychology: A Slide Deck",
     "section": "Working Memory Model",
     "text": "Working Memory Model\n\nBackground"
+  },
+  {
+    "objectID": "posts/Week3/index.html",
+    "href": "posts/Week3/index.html",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Three",
+    "section": "",
+    "text": "An Introduction to jsPsych\n\nA Reaction Time Task\n\n\nClick Below to View a Reaction Time Trial Using jsPsych\nReaction Trial"
+  },
+  {
+    "objectID": "posts/Week 2/index.html#a-hello-world-trial-using-jspsych",
+    "href": "posts/Week 2/index.html#a-hello-world-trial-using-jspsych",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Two",
+    "section": "A Hello World Trial Using jsPsych",
+    "text": "A Hello World Trial Using jsPsych\n\nClick The Link Below for a Simple Trial: Press Any Key to Respond to Hello World\nHello World"
   }
 ]

@@ -3,15 +3,11 @@ title: "A Weekly Cognitive Psychology Blog: Week Number Two"
 author: "C Miller"
 date: "2023-09-13"
 image: "ap_5_also.PNG"
-
 ---
-
 
 ### HTML and Javascript interactivity
 
-
 ##### Using Javascript to Interact with Users Using Color-coded Buttons
-
 
 ```{=html}
 
@@ -140,5 +136,12 @@ image: "ap_5_also.PNG"
   
 </html>
 
-
 ```
+
+## A Hello World Trial Using jsPsych
+
+
+
+#### Click The Link Below for a Simple Trial: Press Any Key to Respond to Hello World 
+
+[Hello World](trialsemaine_deux.html)
