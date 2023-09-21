@@ -1,12 +1,26 @@
 ---
-title: " A Slide Deck of Droid AP-5"
+title: " Topics in Cognitive Psychology: A Slide Deck "
 image: "ap_5_capture.PNG"
 format: 
   revealjs:
-    theme: moon
+    theme: solarized
 editor: visual
 execute: 
   echo: false
 ---
 
-## Biography
+## Background
+
+-   Current Research
+
+## Memory
+
+-   Long term Memory
+
+-   Short Term Memory
+
+## Working Memory Model
+
+-   Background
+
+## Spatial Memory
