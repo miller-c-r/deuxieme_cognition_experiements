@@ -135,13 +135,9 @@ image: "ap_5_also.PNG"
   </body>
   
 </html>
-
 ```
-
 ## A Hello World Trial Using jsPsych
 
-
-
-#### Click The Link Below for a Simple Trial: Press Any Key to Respond to Hello World 
+#### Click The Link Below for a Simple Trial: Press Any Key to Respond to Hello World
 
 [Hello World](trialsemaine_deux.html)

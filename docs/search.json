@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Cognitive Psychology Experiments Using jsPsych",
     "section": "",
-    "text": "Note\n\n\n\nC Miller’s Student Blog\n\n\n\n\n\n\n\n\nExpand to Learn About the Images Below\n\n\n\n\n\nWeekly Blog Posts May Include Photos of Star Wars Rebels Inventory Droid AP-5\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe AP-5 Inventory Droid does not always get along with Astromech Series Droid Chopper\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nTopics in Cognitive Psychology: A Slide Deck\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog\n\n\n\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
+    "text": "Note\n\n\n\nC Miller’s Student Blog\n\n\n\n\n\n\n\n\nExpand to Learn About the Images Below\n\n\n\n\n\nWeekly Blog Posts May Include Photos of Star Wars Rebels Inventory Droid AP-5\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe AP-5 Inventory Droid does not always get along with Astromech Series Droid Chopper\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nTopics in Cognitive Psychology: A Slide Deck\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog\n\n\n\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week 2/index.html",
@@ -116,14 +116,14 @@
     "href": "premiere_experiment.html#experiment-1",
     "title": "EXPERIMENTS: A Slide Deck",
     "section": "Experiment 1",
-    "text": "Experiment 1\nReaction Trial\nReaction Trial"
+    "text": "Experiment 1\n\nReaction Trial"
   },
   {
     "objectID": "premiere_experiment.html#experiment-2",
     "href": "premiere_experiment.html#experiment-2",
     "title": "EXPERIMENTS: A Slide Deck",
     "section": "Experiment 2",
-    "text": "Experiment 2\nAttention Trial"
+    "text": "Experiment 2\n\nAttention Trial"
   },
   {
     "objectID": "premiere_experiment.html#experiment-3",
@@ -173,5 +173,12 @@
     "title": "A Weekly Cognitive Psychology Blog: Week Number Two",
     "section": "A Hello World Trial Using jsPsych",
     "text": "A Hello World Trial Using jsPsych\n\nClick The Link Below for a Simple Trial: Press Any Key to Respond to Hello World\nHello World"
+  },
+  {
+    "objectID": "posts/Week 4/index.html",
+    "href": "posts/Week 4/index.html",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Three",
+    "section": "",
+    "text": "The Stroop Effect\n\nConducting a Stroop Effect Trial Using jsPsych\n\n\nWhat Manipulations Would Increase Elapsed Time During Trials\nStroop Effect Trial"
   }
 ]

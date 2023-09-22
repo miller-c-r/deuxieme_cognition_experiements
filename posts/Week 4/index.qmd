@@ -1,0 +1,17 @@
+---
+title: "A Weekly Cognitive Psychology Blog: Week Number Three"
+author: "C Miller"
+date: "2023-09-28"
+image: "ap_5_spy.png"
+---
+
+
+### The Stroop Effect
+
+#### Conducting a Stroop Effect Trial Using jsPsych
+
+#### What Manipulations Would Increase Elapsed Time During Trials
+
+
+
+[Stroop Effect Trial](stroop_semaine_quatre.html)

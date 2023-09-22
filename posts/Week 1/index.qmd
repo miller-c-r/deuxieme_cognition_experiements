@@ -1,6 +1,6 @@
 ---
 title: " Topics in Cognitive Psychology: A Slide Deck "
-image: "ap_5_capture.PNG"
+image: "ap_5_inventory.png"
 format: 
   revealjs:
     theme: solarized

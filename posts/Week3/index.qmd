@@ -11,5 +11,4 @@ image: "droid_ap_5_space_song.jpg"
 
 #### Click Below to View a Reaction Time Trial Using jsPsych
 
-
 [Reaction Trial](reaction_semaine3.html)
