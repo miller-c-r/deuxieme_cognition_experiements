@@ -3,13 +3,15 @@ title: " Topics in Cognitive Psychology: A Slide Deck "
 image: "ap_5_inventory.png"
 format: 
   revealjs:
-    theme: solarized
+    theme: moon
 editor: visual
 execute: 
   echo: false
 ---
 
-## Background
+## Selected Topic
+
+-   Image Memory
 
 -   Current Research
 
@@ -24,3 +26,5 @@ execute:
 -   Background
 
 ## Spatial Memory
+
+## Image Memory
