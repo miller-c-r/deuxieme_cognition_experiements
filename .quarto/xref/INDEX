@@ -34,5 +34,152 @@
   },
   "posts/Week 4/index.qmd": {
     "index.html": "1fa75963"
+  },
+  "posts/Week 4/jsPsych-main/code-of-conduct.md": {
+    "code-of-conduct.html": "fcbb76b9"
+  },
+  "posts/Week 4/jsPsych-main/contributors.md": {
+    "contributors.html": "2d2bc73f"
+  },
+  "posts/Week 4/jsPsych-main/docs/about/about.md": {
+    "about.html": "bf16ca91"
+  },
+  "posts/Week 4/jsPsych-main/docs/about/license.md": {
+    "license.html": "abfa6458"
+  },
+  "posts/Week 4/jsPsych-main/docs/developers/configuration.md": {
+    "configuration.html": "d42ae2c9"
+  },
+  "posts/Week 4/jsPsych-main/docs/developers/contributing.md": {
+    "contributing.html": "179c8c2b"
+  },
+  "posts/Week 4/jsPsych-main/docs/developers/documentation.md": {
+    "documentation.html": "a9249fc4"
+  },
+  "posts/Week 4/jsPsych-main/docs/developers/extension-development.md": {
+    "extension-development.html": "e7c3585f"
+  },
+  "posts/Week 4/jsPsych-main/docs/developers/plugin-development.md": {
+    "plugin-development.html": "eb1c70ad"
+  },
+  "posts/Week 4/jsPsych-main/docs/extensions/list-of-extensions.md": {
+    "list-of-extensions.html": "f6c0b1a8"
+  },
+  "posts/Week 4/jsPsych-main/docs/extensions/mouse-tracking.md": {
+    "mouse-tracking.html": "2bee53cd"
+  },
+  "posts/Week 4/jsPsych-main/docs/extensions/record-video.md": {
+    "record-video.html": "f11601c3"
+  },
+  "posts/Week 4/jsPsych-main/docs/extensions/webgazer.md": {
+    "webgazer.html": "b31ef462"
+  },
+  "posts/Week 4/jsPsych-main/docs/index.md": {
+    "index.html": "fda93a4d"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/browser-device-support.md": {
+    "browser-device-support.html": "921d9d4f"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/data.md": {
+    "data.html": "afda4da7"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/dynamic-parameters.md": {
+    "dynamic-parameters.html": "2704e2b5"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/events.md": {
+    "events.html": "799097f5"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/exclude-browser.md": {
+    "exclude-browser.html": "9adc7a75"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/experiment-options.md": {
+    "experiment-options.html": "6f462d6e"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/extensions.md": {
+    "extensions.html": "734d7602"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/eye-tracking.md": {
+    "eye-tracking.html": "eebf4ed5"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/fullscreen.md": {
+    "fullscreen.html": "076bd621"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/media-preloading.md": {
+    "media-preloading.html": "283c33b9"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/mturk.md": {
+    "mturk.html": "47de5ce1"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/plugins.md": {
+    "plugins.html": "d87c356a"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/progress-bar.md": {
+    "progress-bar.html": "01fb2fa6"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/prolific.md": {
+    "prolific.html": "4f29b89c"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/record-browser-interactions.md": {
+    "record-browser-interactions.html": "7b3eb0cf"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/running-experiments.md": {
+    "running-experiments.html": "0e0c8fb9"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/simulation.md": {
+    "simulation.html": "180aefce"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/style.md": {
+    "style.html": "1110ca53"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/timeline.md": {
+    "timeline.html": "cf66644c"
+  },
+  "posts/Week 4/jsPsych-main/docs/overview/timing-accuracy.md": {
+    "timing-accuracy.html": "91ccaa6e"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/animation.md": {
+    "animation.html": "ec421b24"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/audio-button-response.md": {
+    "audio-button-response.html": "a2fe439a"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/audio-keyboard-response.md": {
+    "audio-keyboard-response.html": "b4b4d9e7"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/audio-slider-response.md": {
+    "audio-slider-response.html": "e262f303"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/browser-check.md": {
+    "browser-check.html": "6f827961"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/call-function.md": {
+    "call-function.html": "1e48a526"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/canvas-button-response.md": {
+    "canvas-button-response.html": "dee6c04a"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/canvas-keyboard-response.md": {
+    "canvas-keyboard-response.html": "88206d3b"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/canvas-slider-response.md": {
+    "canvas-slider-response.html": "0e64703d"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/categorize-animation.md": {
+    "categorize-animation.html": "963f4508"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/categorize-html.md": {
+    "categorize-html.html": "041f2b14"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/categorize-image.md": {
+    "categorize-image.html": "ed2722d0"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/cloze.md": {
+    "cloze.html": "eb1ce76d"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/external-html.md": {
+    "external-html.html": "2a47c4fa"
+  },
+  "posts/Week 4/jsPsych-main/docs/plugins/free-sort.md": {
+    "free-sort.html": "8655d172"
   }
 }

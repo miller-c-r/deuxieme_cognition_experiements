@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - "img/"
+    - "jspsych/"
 website:
   title: "Cognitive Psychology Experiments Using jsPsych"
   navbar:

@@ -1,10 +1,57 @@
 
-
+<!DOCTYPE html>
 <html>
-  
-  
   <head>
-    <h2>Stroop Effect Trial</h2>
+    <title>A Stroop Experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+
   </head>
   
+  
+  <body></body>
+  
+  
+  <script>
+
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    /* create timeline */
+    var timeline = [];
+
+    
+    /* define welcome message trial */
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "Welcome to the experiment. Press any key to begin."
+    };
+    
+    
+
+    /* define instructions trial */
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>In this task you will see a word in a color</p>
+        <p style='color:red; font-size:60pt;'>BLUE</p>
+        <p> Press r, g, b, or y to identify the color, not the word</p>
+        <p>E.g., press r or red in this example</p>
+        <p>Make your responses as quickly and as accurately as possible</p>
+        <p>Press any key to begin.</p>
+      `,
+      post_trial_gap: 2000
+    };
+    
+    
+    timeline.push(welcome);
+    timeline.push(instructions);
+    jsPsych.run(timeline);
+
+
+  </script>
 </html>
