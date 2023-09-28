@@ -1,10 +1,12 @@
 
+<!DOCTYPE html>
 <html>
   <head>
     <title>A Stroop Experiment</title>
-    <script src="https://unpkg.com/jspsych@7.3.3"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
-    <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+
   </head>
   
   
@@ -28,7 +30,8 @@
       type: jsPsychHtmlKeyboardResponse,
       stimulus: "Welcome to the experiment. Press any key to begin."
     };
-    timeline.push(welcome);
+    
+    
 
     /* define instructions trial */
     var instructions = {
@@ -43,7 +46,11 @@
       `,
       post_trial_gap: 2000
     };
+    
+    
+    timeline.push(welcome);
     timeline.push(instructions);
+    jsPsych.run(timeline);
 
 
   </script>

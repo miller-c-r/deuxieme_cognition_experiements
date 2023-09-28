@@ -146,60 +146,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="conducting-a-stroop-effect-trial-using-jspsych" class="level4">
 <h4 class="anchored" data-anchor-id="conducting-a-stroop-effect-trial-using-jspsych">Conducting a Stroop Effect Trial Using jsPsych</h4>
 </section>
-<section id="what-manipulations-would-increase-elapsed-time-during-trials" class="level4">
-<h4 class="anchored" data-anchor-id="what-manipulations-would-increase-elapsed-time-during-trials">What Manipulations Would Increase Elapsed Time During Trials</h4>
+<section id="measuring-reaction-time-between-congruent-and-incongruent-stimuli" class="level4">
+<h4 class="anchored" data-anchor-id="measuring-reaction-time-between-congruent-and-incongruent-stimuli">Measuring Reaction Time Between Congruent and Incongruent Stimuli</h4>
 <p><a href="stroop_semaine_quatre.html">Stroop Effect Trial</a></p>
-
-
-  
-    <title>A Stroop Experiment</title>
-    <script src="https://unpkg.com/jspsych@7.3.3"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
-    <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css">
-  
-  
-  
-  
-  
-  
-  <script>
-
-    var jsPsych = initJsPsych({
-      on_finish: function() {
-        jsPsych.data.displayData();
-      }
-    });
-
-    /* create timeline */
-    var timeline = [];
-
-    
-    /* define welcome message trial */
-    var welcome = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: "Welcome to the experiment. Press any key to begin."
-    };
-    timeline.push(welcome);
-
-    /* define instructions trial */
-    var instructions = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: `
-        <p>In this task you will see a word in a color</p>
-        <p style='color:red; font-size:60pt;'>BLUE</p>
-        <p> Press r, g, b, or y to identify the color, not the word</p>
-        <p>E.g., press r or red in this example</p>
-        <p>Make your responses as quickly and as accurately as possible</p>
-        <p>Press any key to begin.</p>
-      `,
-      post_trial_gap: 2000
-    };
-    timeline.push(instructions);
-
-
-  </script>
-
-
 
 
 </section>

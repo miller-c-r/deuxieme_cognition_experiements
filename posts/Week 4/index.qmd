@@ -9,62 +9,6 @@ image: "droid_ap_5_space_song.jpg"
 
 #### Conducting a Stroop Effect Trial Using jsPsych
 
-#### What Manipulations Would Increase Elapsed Time During Trials
+#### Measuring Reaction Time Between Congruent and Incongruent Stimuli
 
 [Stroop Effect Trial](stroop_semaine_quatre.html)
-
-
-
-```{=html}
-
-<html>
-  <head>
-    <title>A Stroop Experiment</title>
-    <script src="https://unpkg.com/jspsych@7.3.3"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
-    <link href="https://unpkg.com/jspsych@7.3.3/css/jspsych.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  
-  <body></body>
-  
-  
-  <script>
-
-    var jsPsych = initJsPsych({
-      on_finish: function() {
-        jsPsych.data.displayData();
-      }
-    });
-
-    /* create timeline */
-    var timeline = [];
-
-    
-    /* define welcome message trial */
-    var welcome = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: "Welcome to the experiment. Press any key to begin."
-    };
-    timeline.push(welcome);
-
-    /* define instructions trial */
-    var instructions = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: `
-        <p>In this task you will see a word in a color</p>
-        <p style='color:red; font-size:60pt;'>BLUE</p>
-        <p> Press r, g, b, or y to identify the color, not the word</p>
-        <p>E.g., press r or red in this example</p>
-        <p>Make your responses as quickly and as accurately as possible</p>
-        <p>Press any key to begin.</p>
-      `,
-      post_trial_gap: 2000
-    };
-    timeline.push(instructions);
-
-
-  </script>
-</html>
-
-```
