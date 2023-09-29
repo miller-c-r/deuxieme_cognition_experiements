@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>A Stroop Experiment</title>
@@ -21,11 +20,11 @@
       }
     });
 
-    /* create timeline */
+    
     var timeline = [];
 
     
-    /* define welcome message trial */
+    
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: "Welcome to the experiment. Press any key to begin."
@@ -33,7 +32,7 @@
     
     
 
-    /* define instructions trial */
+    
     var instructions = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: `
@@ -43,29 +42,74 @@
         <p>E.g., press r or red in this example</p>
         <p>Make your responses as quickly and as accurately as possible</p>
         <p>Press any key to begin.</p>
-      `,
-      post_trial_gap: 2000
+        `,
+        post_trial_gap: 2000
     };
     
+    
+    
     var stroop_stimuli = [
-      { stimulus: "<p style='color:red; font-size:60pt;>RED</p>",
+      { stimulus: "<p style='color:red; font-size:60pt;'>RED</p>",
         word: "red",
         color: "red",
         congruency: "Congruent",
         correct_response: 'r'
       },
         
-      { stimulus:"<p style='color:blue; font-size:60pt;'>BLUE</p>",
-        word: "blue",
+      { stimulus:"<p style='color:blue; font-size:60pt;'>GREEN</p>",
+        word: "green",
         color: "blue",
-        congruency: "Congruent",
+        congruency: "Incongruent",
         correct_response: 'b'
         
-      }
+      },
     ];
     
+    
+    
+    
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:60px;">+</div>',
+      choices: "NO_KEYS",
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([1000, 2000], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    };
+
+    
+    
+    var display_stroop_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['r', 'b'],
+      data: {
+        task: 'stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        word: jsPsych.timelineVariable('word'),
+        color: jsPsych.timelineVariable('color'),
+        congruency: jsPsych.timelineVariable('congruency'),
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    
+    var stroop_procedure = {
+      timeline: [fixation, display_stroop_item],
+      timeline_variables: stroop_stimuli,
+      randomize_order: true,
+      repetitions:5
+    };
+  
+
     timeline.push(welcome);
     timeline.push(instructions);
+    timeline.push(stroop_procedure);
     jsPsych.run(timeline);
 
 
