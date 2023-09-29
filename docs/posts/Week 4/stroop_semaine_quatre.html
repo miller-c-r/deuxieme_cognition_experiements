@@ -47,6 +47,22 @@
       post_trial_gap: 2000
     };
     
+    var stroop_stimuli = [
+      { stimulus: "<p style='color:red; font-size:60pt;>RED</p>",
+        word: "red",
+        color: "red",
+        congruency: "Congruent",
+        correct_response: 'r'
+      },
+        
+      { stimulus:"<p style='color:blue; font-size:60pt;'>BLUE</p>",
+        word: "blue",
+        color: "blue",
+        congruency: "Congruent",
+        correct_response: 'b'
+        
+      }
+    ];
     
     timeline.push(welcome);
     timeline.push(instructions);
