@@ -1,0 +1,160 @@
+
+<html>
+  <head>
+    <title>An Experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  
+  
+  <body></body>
+  
+  
+  <script>
+
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    
+    var timeline = [];
+
+    
+    
+    var welcome = {
+      data: {
+          screen_id:"welcome"
+      },  
+      type: jsPsychHtmlButtonResponse,
+      //stimulus: "<p style='color:dodgerblue; font-size:60pt;'>Welcome to the Stroop Experiment</p>",
+      //choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
+      stimulus: `
+              <p style='color:dodgerblue; font-size:40pt;'>Welcome </p>
+              <p style='color:yellow; font-size:40pt;'>to the </p>
+              <p style='color:teal; font-size:40pt;'>Experiment </p>
+              `,
+      choices: ["<p style='border:none; background-color:dodgerblue; color:orange;font-size:30pt;'>Click Here to Continue</p>"],
+      
+};
+      
+
+    
+    
+
+    
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>In this task you will see a list of <b>four</b> words</p>
+        <p> Determine if all the words belong to the same category</p>
+        <p></p>
+        <p> During some trials there will be one word that does NOT belong to One Category</p>
+        <p> The first category is animals. Here is the list of words: <b>dog, cat, duck, fish</b></p>
+        <p></p>
+        <p> The second category is color</p>
+        <p> Here is the list of words: <b>blue, red, green, yellow</b></p>
+        <p> Press <b>T</b> or <b>F </b> to identify if there is a word that does not (either animal or color)</p>
+        <p>E.g., press <b> T </b> if it is true that all the words are in the same category</p>
+        <p>E.g., press <b> F </b> for false. The words are not all in the same category</p>
+        <p>Make your responses as quickly and as accurately as possible</p>
+        <p>Press any key to begin.</p>
+        `,
+        post_trial_gap: 2000
+    };
+    
+    
+    
+    var stroop_stimuli = [
+      { stimulus: "<p style='color:teal; font-size:40pt;'>RED, GREEN, DUCK, YELLOW</p>",
+        category: "color",
+        outlier: "duck",
+        congruency: "Incongruent",
+        correct_response: 't'
+      },
+        
+      { stimulus:"<p style='color:teal; font-size:40pt;'>DOG, CAT, FISH, DUCK</p>",
+        category: "animal",
+        outlier: "none",
+        congruency: "Congruent",
+        correct_response: 't'
+        
+      },
+
+      { stimulus: "<p style='color:teal; font-size:40pt;'>BLUE, CAT, YELLOW, GREEN</p>",
+        category: "color",
+        outlier:"cat",
+        congruency: "Incongruent",
+        correct_response: 'f'
+      },
+
+      { stimulus: "<p style='color:teal; font-size:40pt;'>FISH, CAT, RED, DOG</p>",
+        category: "animal",
+        outlier: "red",
+        congruency: "Incongruent",
+        correct_response: 'f'
+      },
+
+
+      { stimulus: "<p style='color:teal; font-size:40pt;'>YELLOW, RED, BLUE, GREEN</p>",
+        category: "color",
+        outlier: "none",
+        congruency: "Congruent",
+        correct_response: 't'
+      },
+    ];
+    
+    
+    
+    
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:60px;">+</div>',
+      choices: "NO_KEYS",
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([1000, 2000], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    };
+
+    
+    
+    var display_stroop_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['t', 'f'],
+      data: {
+        task: 'stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        category: jsPsych.timelineVariable('category'),
+        outlier: jsPsych.timelineVariable('outlier'),
+        congruency: jsPsych.timelineVariable('congruency'),
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    
+    var stroop_procedure = {
+      timeline: [fixation, display_stroop_item],
+      timeline_variables: stroop_stimuli,
+      randomize_order: true,
+      repetitions:5
+    };
+  
+
+    timeline.push(welcome);
+    timeline.push(instructions);
+    timeline.push(stroop_procedure);
+    jsPsych.run(timeline);
+
+
+  </script>
+</html>

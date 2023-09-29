@@ -2,7 +2,7 @@
 title: "A Weekly Cognitive Psychology Blog: Week Number Four"
 author: "C Miller"
 date: "2023-09-28"
-image: "droid_ap_5_space_song.jpg"
+image: "ap_5_too.jpeg"
 ---
 
 ### The Stroop Effect
@@ -14,3 +14,5 @@ image: "droid_ap_5_space_song.jpg"
 [Template Stroop Effect Trial](stroop_semaine_quatre.html)
 
 [Experiment: Stroop Effect](deuxieme_stroop.html)
+
+[Incongruent Categories of Words](animaux.html)
