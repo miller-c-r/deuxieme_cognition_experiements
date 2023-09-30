@@ -5,3 +5,36 @@ date: "2023-09-28"
 image: "droid_ap_5_space_song.jpg"
 ---
 
+
+
+#### Analyzing Data from Week 4 Cognitive Interference Stroop Trial(s)
+
+
+```{r, echo=FALSE}
+
+
+library(tidyverse)
+library(dplyr)
+library(ggthemes)
+
+
+trial_one <- read_csv('data/numberOne.csv')
+
+trial_one_specs <- spec(trial_one)
+
+print(trial_one)
+
+view(trial_one)
+#trial_accuracy <- trial_premiere %>% select()
+
+
+```
+
+
+```{r}
+
+
+all_data
+
+
+```
