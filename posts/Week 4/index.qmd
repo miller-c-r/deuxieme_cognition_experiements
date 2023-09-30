@@ -5,25 +5,30 @@ date: "2023-09-28"
 image: "ap_5_too.jpeg"
 ---
 
-### The Stroop Effect 
+### The Stroop Effect
 
+##### Conducting a Stroop Effect Trial Using jsPsych
 
+##### Measuring Reaction Time Between Congruent and Incongruent Stimuli
 
-#### Conducting a Stroop Effect Trial Using jsPsych
-
-#### Measuring Reaction Time Between Congruent and Incongruent Stimuli
-
-
-
-#### The word-color stroop effect
-
-
-[Template Stroop Effect Trial](stroop_semaine_quatre.html)
+### The Experiment: Picture-Word Interference
 
 #### Picture-Word Interference
 
 [My Experiment: Picture-Word Interference Effect](deuxieme_stroop.html)
 
-##### Two Separate Lists of Words
+##### [More information on Picture-Word Interference](https://doi.org/10.3758/s13423-016-1167-6)
+
+#### The classic word-color stroop effect
+
+[Template Stroop Effect Trial](stroop_semaine_quatre.html)
+
+#### Brainstorming
+
+##### Identifying similarities using two separate lists of words
 
 [My Experiment: Incongruent Categories of Words](animaux.html)
+
+##### References
+
+Starreveld, P.A., La Heij, W. Picture-word interference is a Stroop effect: A theoretical analysis and new empirical findings. *Psychon Bull Rev* **24**, 721--733 (2017). https://doi.org/10.3758/s13423-016-1167-6
