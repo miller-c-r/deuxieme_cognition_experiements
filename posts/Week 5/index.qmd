@@ -20,21 +20,11 @@ library(ggthemes)
 
 trial_one <- read_csv('data/numberOne.csv')
 
-trial_one_specs <- spec(trial_one)
 
-print(trial_one)
+trial_one_print <- print(trial_one) 
 
-view(trial_one)
+
 #trial_accuracy <- trial_premiere %>% select()
-
-
-```
-
-
-```{r}
-
-
-all_data
 
 
 ```
