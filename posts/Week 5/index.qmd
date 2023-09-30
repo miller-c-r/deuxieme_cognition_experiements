@@ -1,14 +1,11 @@
 ---
-title: "A Weekly Cognitive Psychology Blog: Week Number Four"
+title: "A Weekly Cognitive Psychology Blog: Week Number Five"
 author: "C Miller"
-date: "2023-09-28"
+date: "2023-10-05"
 image: "droid_ap_5_space_song.jpg"
 ---
 
-
-
 #### Analyzing Data from Week 4 Cognitive Interference Stroop Trial(s)
-
 
 ```{r, echo=FALSE}
 
