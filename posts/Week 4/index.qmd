@@ -5,14 +5,25 @@ date: "2023-09-28"
 image: "ap_5_too.jpeg"
 ---
 
-### The Stroop Effect
+### The Stroop Effect 
+
+
 
 #### Conducting a Stroop Effect Trial Using jsPsych
 
 #### Measuring Reaction Time Between Congruent and Incongruent Stimuli
 
+
+
+#### The word-color stroop effect
+
+
 [Template Stroop Effect Trial](stroop_semaine_quatre.html)
 
-[Experiment: Stroop Effect](deuxieme_stroop.html)
+#### Picture-Word Interference
 
-[Incongruent Categories of Words](animaux.html)
+[My Experiment: Picture-Word Interference Effect](deuxieme_stroop.html)
+
+##### Two Separate Lists of Words
+
+[My Experiment: Incongruent Categories of Words](animaux.html)

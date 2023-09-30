@@ -4,6 +4,7 @@ project:
   resources:
     - "img/"
     - "jspsych/"
+    - "farm/"
 website:
   title: "Cognitive Psychology Experiments Using jsPsych"
   navbar:

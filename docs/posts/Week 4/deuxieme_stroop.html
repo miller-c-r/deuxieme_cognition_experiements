@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>A Stroop Experiment</title>
+    <title>An Experiment</title>
     <script src="jspsych/jspsych.js"></script>
     <script src="jspsych/plugin-html-button-response.js"></script>
     <script src="jspsych/plugin-html-keyboard-response.js"></script>
@@ -34,12 +34,12 @@
       //stimulus: "<p style='color:dodgerblue; font-size:60pt;'>Welcome to the Stroop Experiment</p>",
       //choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
       stimulus: `
-              <p style='color:dodgerblue; font-size:50pt;'>Welcome </p>
-              <p style='color:yellow; font-size:50pt;'>to the </p>
-              <p style='color:red; font-size:50pt;'>Stroop </p>
-              <p style='color:teal; font-size:50pt;'>Experiment </p>
+              <p style='color:dodgerblue; font-size:40pt;'>Welcome </p>
+              <p style='color:yellow; font-size:40pt;'>to</p>
+              <p style='color:red; font-size:40pt;'>the</p>
+              <p style='color:teal; font-size:40pt;'>Experiment </p>
               `,
-      choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
+      choices: ["<p style='border:pink; background-color:pink; color:grey;font-size:30pt;'>Click Here to Continue</p>"],
       
 };
       
@@ -51,10 +51,15 @@
     var instructions = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: `
-        <p>In this task you will see a word in a color</p>
-        <p style='color:red; font-size:60pt;'>BLUE</p>
-        <p> Press r, g, b, or y to identify the color, not the word</p>
-        <p>E.g., press r or red in this example</p>
+        <p>In this task you will be presented with one of <b>four</b> words</p>
+        <p> You will also be presented with an image</p>
+        <p> The first category is animals. Here is the list of words: <b>dog, cat, duck, fish</b></p>
+        <p></p>
+        <p> The second category is color</p>
+        <p> Here is the list of words: <b>duck, boat, fish, cat</b></p>
+        <p> Press <b>d</b> , <b>b </b>, <b>f</b>,<b>c</b> for the <b> word </b> on the screen</p>
+        <p>E.g., press <b> d </b> for <b> duck </b> </p>
+        
         <p>Make your responses as quickly and as accurately as possible</p>
         <p>Press any key to begin.</p>
         `,
@@ -64,19 +69,46 @@
     
     
     var stroop_stimuli = [
-      { stimulus: "<p style='color:red; font-size:60pt;'>RED</p>",
-        word: "red",
-        color: "red",
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'> DUCK</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "duck",
+        word: "duck",
         congruency: "Congruent",
-        correct_response: 'r'
+        correct_response: 'd'
       },
-        
-      { stimulus:"<p style='color:blue; font-size:60pt;'>GREEN</p>",
-        word: "green",
-        color: "blue",
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>FISH</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "fish",
+        congruency: "Congruent",
+        correct_response: 'f'
+      },
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>DUCK</p>
+        <img src='img/cat.jpg'></img>
+        `,
+        image: "cat",
+        word: "duck",
+        congruency: "Incongruent",
+        correct_response: 'd'
+      },
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>BOAT</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "boat",
         congruency: "Incongruent",
         correct_response: 'b'
-        
       },
     ];
     
@@ -100,12 +132,12 @@
     var display_stroop_item = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: jsPsych.timelineVariable('stimulus'),
-      choices: ['r', 'b'],
+      choices: ['d', 'b', 'f','c'],
       data: {
         task: 'stroop',
         correct_response: jsPsych.timelineVariable('correct_response'),
+        image: jsPsych.timelineVariable('image'),
         word: jsPsych.timelineVariable('word'),
-        color: jsPsych.timelineVariable('color'),
         congruency: jsPsych.timelineVariable('congruency'),
       },
       on_finish: function(data){
