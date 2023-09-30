@@ -55,8 +55,9 @@
         <p> You will also be presented with an image</p>
         <p> The first category is animals. Here is the list of words: <b>dog, cat, duck, fish</b></p>
         <p></p>
-        <p> The second category is color</p>
-        <p> Here is the list of words: <b>duck, boat, fish, cat</b></p>
+    
+        <img src='img/duck.jpg'></img>
+        <img src='img/cat.jpg'></img>
         <p> Press <b>d</b> , <b>b </b>, <b>f</b>,<b>c</b> for the <b> word </b> on the screen</p>
         <p>E.g., press <b> d </b> for <b> duck </b> </p>
         
@@ -109,6 +110,26 @@
         word: "boat",
         congruency: "Incongruent",
         correct_response: 'b'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/boat.jpg'></img>
+        `,
+        image: "boat",
+        word: "cat",
+        congruency: "Incongruent",
+        correct_response: 'c'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "cat",
+        word: "cat",
+        congruency: "Congruent",
+        correct_response: 'c'
       },
     ];
     
