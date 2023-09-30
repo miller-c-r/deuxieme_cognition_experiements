@@ -173,12 +173,47 @@
       randomize_order: true,
       repetitions:5
     };
-  
-  
-  
+    
+    
+    var debrief = {
+      data: {
+          screen_id:"debrief"
+      },  
+      type: jsPsychHtmlButtonResponse,
+      //stimulus: "<p style='color:dodgerblue; font-size:60pt;'>Welcome to the Stroop Experiment</p>",
+      //choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
+      stimulus: 
+              "<p style='color:dodgerblue; font-size:40pt;'>Thank You For Completing The Experiment </p>",
+              
+      choices: ["<p style='border:pink; background-color:pink; color:grey;font-size:30pt;'>Click Here to Complete</p>"],
+      
+    };
+
+
+    
+
+    //var debrief = {
+      //type: jsPsychHtmlKeyboardResponse,
+      //stimulus: function() {
+      
+        //var trials = jsPsych.data.get().filter({task: 'response'});
+        //var correct_stroop_stimuli = stroop_stimuli.filter({correct: true});
+        //var accuracy = Math.round(correct_stroop_stimuli.count() / stroop_stimuli.count() * 100);
+        //var rt = Math.round(correct_stroop_stimuli.select('rt').mean());
+
+        //return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          //<p>Your average response time was ${rt}ms.</p>
+          //<p>Press any key to complete the experiment. Thank you!</p>`;
+          //"<p style='color:dodgerblue; font-size:40pt;'>The Experiment is Now Complete. Thank you. </p>";
+        
+
+      //}
+    //};
+
     timeline.push(welcome);
     timeline.push(instructions);
     timeline.push(stroop_procedure);
+    timeline.push(debrief);
     jsPsych.run(timeline);
 
 
