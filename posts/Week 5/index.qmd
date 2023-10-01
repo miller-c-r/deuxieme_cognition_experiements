@@ -7,21 +7,104 @@ image: "droid_ap_5_space_song.jpg"
 
 #### Analyzing Data from Week 4 Cognitive Interference Stroop Trial(s)
 
-```{r, echo=FALSE}
-
+```{r, echo=FALSE, message=FALSE, include=FALSE}
 
 library(tidyverse)
 library(dplyr)
 library(ggthemes)
+library(readxl)
+library(reshape2)
+library(knitr)
+library(ggrepel)
+
+```
 
 
-trial_one <- read_csv('data/numberOne.csv')
+```{r}
+
+trial_one <- read_xlsx("data/first_raw_data.xlsx")
+
+```
 
 
-trial_one_print <- print(trial_one) 
+```{r}
+
+glimpse(trial_one)
+
+#(trial_one)
+
+```
 
 
-#trial_accuracy <- trial_premiere %>% select()
+
+
+
+### Reaction Time vs Congruency (image stimuli)
+
+```{r fig.align="center", echo = FALSE,fig.width = 10}
+
+
+
+trial_one%>%
+      mutate(
+    rt = as.numeric(rt)
+  )%>%
+  filter(rt != "null")%>%
+  filter(image != "NA")%>%
+  filter(trial_type != "htmlbuttonresponse")%>%
+  filter(correct != "NA") %>%
+  ggplot(aes(congruency, rt, color=image))+
+  geom_point()+
+  scale_y_continuous(n.breaks = 20)+
+  
+  labs(
+            title="Picture-Word Interference Trial One",
+            x="Congruency",
+            y="Reaction Time (milliseconds)")+
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))+
+  theme_solarized()
+
+
+
+
+```
+
+
+
+###  Reaction Time Histogram
+
+```{r fig.align="center", echo = FALSE,fig.width = 10}
+
+
+
+
+
+
+trial_one%>%
+        mutate(
+    rt = as.numeric(rt)
+  )%>%
+  
+  filter(rt != "null")%>%
+  filter(image != "NA")%>%
+  filter(rt != "null") %>%
+  filter(trial_type != "htmlbuttonresponse")%>%
+  filter(correct != "NA") %>% 
+  filter(word != "NA")%>%
+  ggplot(aes(rt))+
+  geom_histogram(bin = 10  ) +#(stat="identity", position = "dodge")+
+  
+  labs(
+            title="Picture-Word Interference Trial One",
+            x="Congruency",
+            y= "Reaction Time (milliseconds)")+
+  scale_y_continuous(n.breaks = 20)+
+
+  
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))+
+  theme_classic()
+
+
 
 
 ```
