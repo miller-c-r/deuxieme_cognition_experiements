@@ -48,7 +48,7 @@ trial_one%>%
   filter(correct != "NA") %>%
   ggplot(aes(congruency, rt))+
   geom_boxplot()+
-  geom_jitter(color="#35b", size=0.4, alpha=0.9)+
+  geom_jitter(color="purple", size=0.9, alpha=0.9)+
   scale_fill_viridis(discrete=TRUE, alpha=0.6, option="A")+
   labs(
             title="Picture-Word Interference Trial One",
@@ -114,13 +114,14 @@ trial_one%>%
   filter(trial_type != "htmlbuttonresponse")%>%
   filter(correct != "NA") %>%
   ggplot(aes(rt))+
-  geom_histogram(binwidth=3, fill= "#69b3a2")+
+  geom_histogram(binwidth=20, fill= "#69b3a2")+
   #scale_fill_viridis(discrete=FALSE, alpha=0.6, option="A")+
+  scale_x_continuous(n.breaks=10)+
   labs(
-            title="Picture-Word Interference Trial One",
-            x="Congruency",
-            y="Reaction Time (milliseconds)")+
-  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
+            title="Histogram Picture-Word Interference Trial One",
+            x="Reaction Time (milliseconds)")+
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))+
+  theme_solarized_2()
   
 
 
