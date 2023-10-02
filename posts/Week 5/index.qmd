@@ -16,9 +16,10 @@ library(readxl)
 library(reshape2)
 library(knitr)
 library(ggrepel)
+library(viridis)
+library(hrbrthemes)
 
 ```
-
 
 ```{r}
 
@@ -26,15 +27,46 @@ trial_one <- read_xlsx("data/first_raw_data.xlsx")
 
 ```
 
-
 ```{r}
 
-glimpse(trial_one)
+#glimpse(trial_one)
 
 #(trial_one)
 
 ```
 
+
+
+```{r fig.align="center", echo = FALSE,fig.width = 10}
+trial_one%>%
+      mutate(
+    rt = as.numeric(rt)
+  )%>%
+  filter(rt != "null")%>%
+  filter(image != "NA")%>%
+  filter(trial_type != "htmlbuttonresponse")%>%
+  filter(correct != "NA") %>%
+  ggplot(aes(congruency, rt))+
+  geom_boxplot()+
+  geom_jitter(color="#35b", size=0.4, alpha=0.9)+
+  scale_fill_viridis(discrete=TRUE, alpha=0.6, option="A")+
+  labs(
+            title="Picture-Word Interference Trial One",
+            x="Congruency",
+            y="Reaction Time (milliseconds)")+
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
+  
+
+
+
+
+
+
+
+
+
+
+```
 
 
 
@@ -69,41 +101,27 @@ trial_one%>%
 
 ```
 
+### Histogram
 
 
-###  Reaction Time Histogram
-
-```{r fig.align="center", echo = FALSE,fig.width = 10}
-
-
-
-
-
-
+```{r fig.align="center", echo = FALSE}
 trial_one%>%
-        mutate(
+      mutate(
     rt = as.numeric(rt)
   )%>%
-  
   filter(rt != "null")%>%
   filter(image != "NA")%>%
-  filter(rt != "null") %>%
   filter(trial_type != "htmlbuttonresponse")%>%
-  filter(correct != "NA") %>% 
-  filter(word != "NA")%>%
+  filter(correct != "NA") %>%
   ggplot(aes(rt))+
-  geom_histogram(bin = 10  ) +#(stat="identity", position = "dodge")+
-  
+  geom_histogram(binwidth=3, fill= "#69b3a2")+
+  #scale_fill_viridis(discrete=FALSE, alpha=0.6, option="A")+
   labs(
             title="Picture-Word Interference Trial One",
             x="Congruency",
-            y= "Reaction Time (milliseconds)")+
-  scale_y_continuous(n.breaks = 20)+
-
+            y="Reaction Time (milliseconds)")+
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
   
-  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))+
-  theme_classic()
-
 
 
 

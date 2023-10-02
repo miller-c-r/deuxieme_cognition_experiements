@@ -181,30 +181,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>trial_one <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"data/first_raw_data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(trial_one)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 63
-Columns: 14
-$ rt               &lt;chr&gt; "2764", "986", "null", "424", "null", "1295", "null",…
-$ stimulus         &lt;chr&gt; "\r\r\n              &lt;p style='color:dodgerblue; font…
-$ response         &lt;chr&gt; "0", "d", "null", "d", "null", "c", "null", "c", "nul…
-$ screen_id        &lt;chr&gt; "welcome", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-$ trial_type       &lt;chr&gt; "html-button-response", "html-keyboard-response", "ht…
-$ trial_index      &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,…
-$ time_elapsed     &lt;dbl&gt; 2764, 3751, 6763, 7188, 8201, 9497, 11503, 12208, 142…
-$ internal_node_id &lt;chr&gt; "0.0-0.0", "0.0-1.0", "0.0-2.0-0.0", "0.0-2.0-1.0", "…
-$ task             &lt;chr&gt; NA, NA, "fixation", "stroop", "fixation", "stroop", "…
-$ correct_response &lt;chr&gt; NA, NA, NA, "f", NA, "c", NA, "c", NA, "d", NA, "b", …
-$ image            &lt;chr&gt; NA, NA, NA, "fish", NA, "cat", NA, "boat", NA, "duck"…
-$ word             &lt;chr&gt; NA, NA, NA, "fish", NA, "cat", NA, "cat", NA, "duck",…
-$ congruency       &lt;chr&gt; NA, NA, NA, "Congruent", NA, "Congruent", NA, "Incong…
-$ correct          &lt;lgl&gt; NA, NA, NA, FALSE, NA, TRUE, NA, TRUE, NA, TRUE, NA, …</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#glimpse(trial_one)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#(trial_one)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(trial_one)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="reaction-time-vs-congruency-image-stimuli" class="level3">
-<h3 class="anchored" data-anchor-id="reaction-time-vs-congruency-image-stimuli">Reaction Time vs Congruency (image stimuli)</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: There was 1 warning in `mutate()`.
@@ -221,8 +201,8 @@ Caused by warning:
 </div>
 </div>
 </section>
-<section id="reaction-time-histogram" class="level3">
-<h3 class="anchored" data-anchor-id="reaction-time-histogram">Reaction Time Histogram</h3>
+<section id="reaction-time-vs-congruency-image-stimuli" class="level3">
+<h3 class="anchored" data-anchor-id="reaction-time-vs-congruency-image-stimuli">Reaction Time vs Congruency (image stimuli)</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: There was 1 warning in `mutate()`.
@@ -230,16 +210,28 @@ Caused by warning:
 Caused by warning:
 ! NAs introduced by coercion</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_histogram(bin = 10): Ignoring unknown parameters: `bin`</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="histogram" class="level3">
+<h3 class="anchored" data-anchor-id="histogram">Histogram</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `rt = as.numeric(rt)`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
