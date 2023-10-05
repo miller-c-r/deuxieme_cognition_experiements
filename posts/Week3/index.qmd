@@ -2,7 +2,7 @@
 title: "A Weekly Cognitive Psychology Blog: Week Number Three"
 author: "C Miller"
 date: "2023-09-21"
-image: "IMG_1784.JPG"
+image: "img_1784.JPG"
 ---
 
 ### An Introduction to jsPsych
