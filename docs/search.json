@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Cognitive Psychology Experiments Using jsPsych",
     "section": "",
-    "text": "Note\n\n\n\nC Miller’s Student Blog\n\n\n\n\n\n\n\n\nExpand to Learn About the Images Below\n\n\n\n\n\nWeekly Blog Posts\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nClick Below to View Weekly jsPsych blog posts\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nTopics in Cognitive Psychology: A Slide Deck\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Five\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Four\n\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog\n\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
+    "text": "Note\n\n\n\nC Miller’s Student Blog\n\n\n\n\n\n\n\n\nExpand to Learn About the Images Below\n\n\n\n\n\nWeekly Blog Posts\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nClick Below to View Weekly jsPsych blog posts\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nTopics in Cognitive Psychology: A Slide Deck\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Five\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Five\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Four\n\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Three\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog: Week Number Two\n\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nC Miller\n\n\n\n\n\n\n  \n\n\n\n\nA Weekly Cognitive Psychology Blog\n\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2023\n\n\nC Miller\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week 2/index.html",
@@ -229,5 +229,12 @@
     "title": "A Weekly Cognitive Psychology Blog: Week Number Five",
     "section": "",
     "text": "Analyzing Data from Week 4 Cognitive Interference Stroop Trial(s)\n\ntrial_one &lt;- read_xlsx(\"data/first_raw_data.xlsx\")\n\n\n#glimpse(trial_one)\n\n#(trial_one)\n\n\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `rt = as.numeric(rt)`.\nCaused by warning:\n! NAs introduced by coercion\n\n\n\n\n\n\n\n\n\n\n\nReaction Time vs Congruency (image stimuli)\n\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `rt = as.numeric(rt)`.\nCaused by warning:\n! NAs introduced by coercion\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `rt = as.numeric(rt)`.\nCaused by warning:\n! NAs introduced by coercion\n\n\n\n\n\n\n\n\n\n\n\nStandard Deviation"
+  },
+  {
+    "objectID": "posts/Week 1/index.html#return-to-home",
+    "href": "posts/Week 1/index.html#return-to-home",
+    "title": "Topics in Cognitive Psychology: A Slide Deck",
+    "section": "Return to Home",
+    "text": "Return to Home\nHome Page"
   }
 ]

@@ -1,6 +1,6 @@
 ---
 title: " Topics in Cognitive Psychology: A Slide Deck "
-image: "ap_5_inventory.png"
+image: "IMG_1784.JPG"
 format: 
   revealjs:
     theme: moon
@@ -8,6 +8,10 @@ editor: visual
 execute: 
   echo: false
 ---
+
+
+## Return to Home
+[Home Page](https://miller-c-r.github.io/deuxieme_cognition_experiements/)
 
 ## Selected Topic
 

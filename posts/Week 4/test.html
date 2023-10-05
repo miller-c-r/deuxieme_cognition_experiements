@@ -1,0 +1,221 @@
+
+<html>
+  <head>
+    <title>An Experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  
+  
+  <body></body>
+  
+  
+  <script>
+
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    
+    var timeline = [];
+
+    
+    
+    var welcome = {
+      data: {
+          screen_id:"welcome"
+      },  
+      type: jsPsychHtmlButtonResponse,
+      //stimulus: "<p style='color:dodgerblue; font-size:60pt;'>Welcome to the Stroop Experiment</p>",
+      //choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
+      stimulus: `
+              <p style='color:dodgerblue; font-size:40pt;'>Welcome </p>
+              <p style='color:yellow; font-size:40pt;'>to</p>
+              <p style='color:red; font-size:40pt;'>the</p>
+              <p style='color:teal; font-size:40pt;'>Experiment </p>
+              `,
+      choices: ["<p style='border:pink; background-color:pink; color:grey;font-size:30pt;'>Click Here to Continue</p>"],
+      
+};
+      
+
+    
+    
+
+    
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>In this task you will be presented with one of <b>four</b> words</p>
+        <p> You will also be presented with an image</p>
+        <p> The first category is animals. Here is the list of words: <b>dog, cat, duck, fish</b></p>
+        <p></p>
+    
+        <img src='img/duck.jpg'></img>
+        <img src='img/cat.jpg'></img>
+        <p> Press <b>d</b> , <b>b </b>, <b>f</b>,<b>c</b> for the <b> word </b> on the screen</p>
+        <p>E.g., press <b> d </b> for <b> duck </b> </p>
+        
+        <p>Make your responses as quickly and as accurately as possible</p>
+        <p>Press any key to begin.</p>
+        `,
+        post_trial_gap: 2000
+    };
+    
+    
+    
+    var stroop_stimuli = [
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'> DUCK</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "duck",
+        word: "duck",
+        congruency: "Congruent",
+        correct_response: 'd'
+      },
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>FISH</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "fish",
+        congruency: "Congruent",
+        correct_response: 'f'
+      },
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>DUCK</p>
+        <img src='img/cat.jpg'></img>
+        `,
+        image: "cat",
+        word: "duck",
+        congruency: "Incongruent",
+        correct_response: 'd'
+      },
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>BOAT</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "boat",
+        congruency: "Incongruent",
+        correct_response: 'b'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/boat.jpg'></img>
+        `,
+        image: "boat",
+        word: "cat",
+        congruency: "Incongruent",
+        correct_response: 'c'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "cat",
+        word: "cat",
+        congruency: "Congruent",
+        correct_response: 'c'
+      },
+    ];
+    
+    
+    
+    
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:80px;">+</div>',
+      choices: "NO_KEYS",
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([1000, 2000], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    };
+
+    
+    
+    var display_stroop_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['d', 'b', 'f','c'],
+      data: {
+        task: 'stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        image: jsPsych.timelineVariable('image'),
+        word: jsPsych.timelineVariable('word'),
+        congruency: jsPsych.timelineVariable('congruency'),
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    
+    var stroop_procedure = {
+      timeline: [fixation, display_stroop_item],
+      timeline_variables: stroop_stimuli,
+      randomize_order: true,
+      repetitions:5
+    };
+    
+    
+    var debrief = {
+      data: {
+          screen_id:"debrief"
+      },  
+      type: jsPsychHtmlButtonResponse,
+      //stimulus: "<p style='color:dodgerblue; font-size:60pt;'>Welcome to the Stroop Experiment</p>",
+      //choices: ["<p style='border:none; background-color:pink; color:teal;font-size:60pt;'>Click Here to Continue</p>"],
+      stimulus: 
+              "<p style='color:dodgerblue; font-size:40pt;'>Thank You For Completing The Experiment </p>",
+              
+      choices: ["<p style='border:pink; background-color:pink; color:grey;font-size:30pt;'>Click Here to Complete</p>"],
+      
+    };
+
+
+    
+
+    //var debrief = {
+      //type: jsPsychHtmlKeyboardResponse,
+      //stimulus: function() {
+      
+        //var trials = jsPsych.data.get().filter({task: 'response'});
+        //var correct_stroop_stimuli = stroop_stimuli.filter({correct: true});
+        //var accuracy = Math.round(correct_stroop_stimuli.count() / stroop_stimuli.count() * 100);
+        //var rt = Math.round(correct_stroop_stimuli.select('rt').mean());
+
+        //return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          //<p>Your average response time was ${rt}ms.</p>
+          //<p>Press any key to complete the experiment. Thank you!</p>`;
+          //"<p style='color:dodgerblue; font-size:40pt;'>The Experiment is Now Complete. Thank you. </p>";
+        
+
+      //}
+    //};
+
+    timeline.push(welcome);
+    timeline.push(instructions);
+    timeline.push(stroop_procedure);
+    timeline.push(debrief);
+    jsPsych.run(timeline);
+
+
+  </script>
+</html>
