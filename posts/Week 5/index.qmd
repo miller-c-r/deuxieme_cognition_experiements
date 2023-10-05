@@ -2,7 +2,7 @@
 title: "A Weekly Cognitive Psychology Blog: Week Number Five"
 author: "C Miller"
 date: "2023-10-05"
-image: "droid_ap_5_space_song.jpg"
+image: "IMG_1784.JPG"
 ---
 
 #### Analyzing Data from Week 4 Cognitive Interference Stroop Trial(s)
@@ -35,8 +35,6 @@ trial_one <- read_xlsx("data/first_raw_data.xlsx")
 
 ```
 
-
-
 ```{r fig.align="center", echo = FALSE,fig.width = 10}
 trial_one%>%
       mutate(
@@ -67,9 +65,6 @@ trial_one%>%
 
 
 ```
-
-
-
 
 ### Reaction Time vs Congruency (image stimuli)
 
@@ -103,7 +98,6 @@ trial_one%>%
 
 ### Histogram
 
-
 ```{r fig.align="center", echo = FALSE}
 trial_one%>%
       mutate(
@@ -127,3 +121,5 @@ trial_one%>%
 
 
 ```
+
+### Standard Deviation

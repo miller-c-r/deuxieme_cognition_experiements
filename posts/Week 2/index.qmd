@@ -2,7 +2,7 @@
 title: "A Weekly Cognitive Psychology Blog: Week Number Two"
 author: "C Miller"
 date: "2023-09-13"
-image: "ap_5_also.PNG"
+image: "IMG_1784.JPG"
 ---
 
 ### HTML and Javascript interactivity

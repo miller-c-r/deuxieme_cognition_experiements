@@ -2,7 +2,7 @@
 title: "A Weekly Cognitive Psychology Blog: Week Number Four"
 author: "C Miller"
 date: "2023-09-28"
-image: "ap_5_too.jpeg"
+image: "IMG_1784.JPG"
 ---
 
 ### The Stroop Effect
