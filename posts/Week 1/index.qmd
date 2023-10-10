@@ -9,8 +9,8 @@ execute:
   echo: false
 ---
 
-
 ## Return to Home
+
 [Home Page](https://miller-c-r.github.io/deuxieme_cognition_experiements/)
 
 ## Selected Topic
