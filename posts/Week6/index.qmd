@@ -15,5 +15,8 @@ image: "img_1784.JPG"
 
 #### References
 
+Potter, M. C., Staub, A., Rado, J., & O'Connor, D. H. (2002). Recognition memory for briefly presented pictures: The time course of rapid forgetting. Journal of Experimental Psychology: Human Perception and Performance, 28(5), 1163--1175. https://doi.org/10.1037/0096-1523.28.5.1163
 
-Potter, M. C., Staub, A., Rado, J., & O'Connor, D. H. (2002). Recognition memory for briefly presented pictures: The time course of rapid forgetting. Journal of Experimental Psychology: Human Perception and Performance, 28(5), 1163–1175. https://doi.org/10.1037/0096-1523.28.5.1163
+## Image Memory Experiment in jsPsych
+
+[Link to the memory trials](week6.html)
