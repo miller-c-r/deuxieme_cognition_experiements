@@ -192,20 +192,18 @@
 
     
 
-    var debrief = {
+      var debrief = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: function() {
       
-        var trials = jsPsych.data.get().filter({task: 'response'});
-        var correct_stroop_stimuli = stroop_stimuli.filter({correct: true});
-        var accuracy = Math.round(correct_stroop_stimuli.count() / stroop_stimuli.count() * 100);
+        var trials = jsPsych.data.get().filter({task: 'stroop'});
+        var correct_stroop_stimuli = trials.filter({correct: true});
+        var accuracy = Math.round(correct_stroop_stimuli.count() / trials.count() * 100);
         var rt = Math.round(correct_stroop_stimuli.select('rt').mean());
-
         return `<p>You responded correctly on ${accuracy}% of the trials.</p>
           <p>Your average response time was ${rt}ms.</p>
-          <p>Press any key to complete the experiment. Thank you!</p>`;
-          "<p style='color:dodgerblue; font-size:40pt;'>The Experiment is Now Complete. Thank you. </p>";
-        
+          <p>Press any key to complete the experiment. Thank you!</p>
+          <p style='color:dodgerblue; font-size:40pt;'>The Experiment is Now Complete. Thank you. </p>`;
 
       }
     };
