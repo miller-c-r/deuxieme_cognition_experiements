@@ -45,7 +45,148 @@
 };
       
 
+    var encoding instructions = {
+      type: jsPsychHtmlButtonResponse
+      stimulus: `
+              <p style='color:teal; font-size:40pt;'>In this task you will be shown a series of pictures </p>
+              <p style='color:teal; font-size:40pt;'>The pictures will be presented quikly and they will remain on the screen or different durations</p>
+              <p style='color:teal; font-size:40pt;'>After the encoding phase you will be given a recognition test</p>
+        
+              `,
+      choices: ["<p style='border:pink; background-color:pink; color:grey;font-size:30pt;'>Click Here to Continue</p>"],
+    };
     
+    
+    
+    
+    
+    var stroop_stimuli = [
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'> DUCK</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "duck",
+        word: "duck",
+        congruency: "Congruent",
+        correct_response: 'd'
+      },
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>FISH</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "fish",
+        congruency: "Congruent",
+        correct_response: 'f'
+      },
+
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>DUCK</p>
+        <img src='img/cat.jpg'></img>
+        `,
+        image: "cat",
+        word: "duck",
+        congruency: "Incongruent",
+        correct_response: 'd'
+      },
+
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>BOAT</p>
+        <img src='img/fish.jpg'></img>
+        `,
+        image: "fish",
+        word: "boat",
+        congruency: "Incongruent",
+        correct_response: 'b'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/boat.jpg'></img>
+        `,
+        image: "boat",
+        word: "cat",
+        congruency: "Incongruent",
+        correct_response: 'c'
+      },
+      
+      { stimulus:`
+        <p style='color:mediumvioletred; font-size:40pt;'>CAT</p>
+        <img src='img/duck.jpg'></img>
+        `,
+        image: "cat",
+        word: "cat",
+        congruency: "Congruent",
+        correct_response: 'c'
+      },
+    ];
+    
+    
+    
+    
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:80px;">+</div>',
+      choices: "NO_KEYS",
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([1000, 2000], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    };
+
+    
+    
+    var display_stroop_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['d', 'b', 'f','c'],
+      data: {
+        task: 'stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        image: jsPsych.timelineVariable('image'),
+        word: jsPsych.timelineVariable('word'),
+        congruency: jsPsych.timelineVariable('congruency'),
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    
+    var stroop_procedure = {
+      timeline: [fixation, display_stroop_item],
+      timeline_variables: stroop_stimuli,
+      randomize_order: true,
+      repetitions:5
+    };
+    
+    
+      var debrief = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: function() {
+      
+        var trials = jsPsych.data.get().filter({task: 'stroop'});
+        var correct_stroop_stimuli = trials.filter({correct: true});
+        var accuracy = Math.round(correct_stroop_stimuli.count() / trials.count() * 100);
+        var rt = Math.round(correct_stroop_stimuli.select('rt').mean());
+        return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          <p>Your average response time was ${rt}ms.</p>
+          <p>Press any key to complete the experiment. Thank you!</p>
+          <p style='color:dodgerblue; font-size:40pt;'>The Experiment is Now Complete. Thank you. </p>`;
+
+      }
+    };
+
+    timeline.push(welcome);
+    timeline.push(encoding_instructions);
+    timeline.push(stroop_procedure);
+    timeline.push(debrief);
+    jsPsych.run(timeline);
 
 
   
