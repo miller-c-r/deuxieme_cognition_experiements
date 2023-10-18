@@ -1,4 +1,15 @@
 ---
-
-title: "A Weekly Cognitive Blog: Week Number 7" date: "2023-10-19" author: "C Miller"
+title: "A Weekly Cognitive Blog: Week Number 7" 
+date: "2023-10-19" 
+author: "C Miller"
+image: "IMG_1784.JPG"
 ---
+
+
+
+
+### Levie / Hathaway Picture Recognition Memory: A Review of Research
+and Theory
+
+
+[Levie / Hathaway PDF](levie_hath1988.pdf)
