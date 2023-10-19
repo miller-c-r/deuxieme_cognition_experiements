@@ -5,11 +5,10 @@ author: "C Miller"
 image: "IMG_1784.JPG"
 ---
 
-
-
-
 ### Levie / Hathaway Picture Recognition Memory: A Review of Research
+
 and Theory
 
-
 [Levie / Hathaway PDF](levie_hath1988.pdf)
+
+[My Summary of the 1988 Review](summary_levie_hath.docx)
