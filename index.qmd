@@ -18,7 +18,7 @@ C Miller's Student Blog
 ::: {.callout-caution collapse="true"}
 ## Expand to Learn About the Images Below
 
-Weekly Blog Posts 
+Weekly Blog Posts
 :::
 
 ::: callout-tip
