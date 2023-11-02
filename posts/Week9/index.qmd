@@ -5,10 +5,10 @@ date: "2023-11-02"
 image: "IMG_1784.JPG"
 ---
 
-
 ## The role of familiarity and orientation immediate and delayed recognition of pictorial stimuli
 
 ##### Scapinello 1970
 
-
 [The Scapinello Article. A pdf link](orientation_scapinello.pdf)
+
+[Brief Summary of Scapinello , 1970](qalmri_pictorial.docx)
