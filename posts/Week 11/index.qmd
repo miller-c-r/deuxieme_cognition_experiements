@@ -5,21 +5,24 @@ date: "2023-11-16"
 image: "IMG_1784.JPG"
 ---
 
-
 ## Instance Theory and MINERVA II
 
-
 #### Schema Abstraction" in a Multiple-Trace Memory Model
+
 ##### Douglas L. Hintzman
+
 ##### University of Oregon
 
 [Hintzman's Schema Abstraction" University of Oregon](Hintzman_Schema.pdf)
 
-
 #### Instance theory as a domain- general framework for cognitive psychology
+
 ##### Randall K. Jamieson , Brendan T. Johns, John R. Vokey and Michael N. Jones
 
 [Instance Theory as a Domain-General Framework for Cognitive Psychology PDF](instance_theory_domain_general.pdf)
 
-
 ### A MINERVA II Model in MS Excel
+
+
+[Excel File with MINERVA Tutorial?](minerva_cmiller.xlsx)
+
