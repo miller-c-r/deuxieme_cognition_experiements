@@ -1,0 +1,23 @@
+---
+title:  "A Weekly Cognitive Psychology Blog: Week Number Twelve"
+author: "C Miller"
+date: "2023-12-7"
+---
+
+
+
+## A Minerva Model in R
+
+```{r, echo=FALSE}
+library(devtools)
+devtools::install_github("CrumpLab/RsemanticLibrarian")
+library(lsa)
+```
+
+
+## Section I
+
+```{r}
+
+
+```
