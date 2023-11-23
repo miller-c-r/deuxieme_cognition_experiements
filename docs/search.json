@@ -333,7 +333,7 @@
     "href": "posts/Week 12/index.html#memory-matrix",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
     "section": "Memory Matrix",
-    "text": "Memory Matrix\n\n#define indices for old and new items\nold &lt;- 1:50\nnew &lt;-51:100\n\n\n#put old itsms in a memory matrix\n\nmemory &lt;- items[old,]"
+    "text": "Memory Matrix\n\n#define indices for old and new items\nold &lt;- 1:50\nnew &lt;-51:100\n\n\n#put old items into a memory matrix\n\nmemory &lt;- items[old,]"
   },
   {
     "objectID": "posts/Week 12/index.html#next-section",
@@ -341,5 +341,12 @@
     "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
     "section": "Next Section",
     "text": "Next Section"
+  },
+  {
+    "objectID": "posts/Week 12/index.html#get-an-item-to-probe-memory",
+    "href": "posts/Week 12/index.html#get-an-item-to-probe-memory",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
+    "section": "get an item to probe memory",
+    "text": "get an item to probe memory\n\nprobe_id &lt;- 53\n\nprobe &lt;- items[probe_id,]"
   }
 ]

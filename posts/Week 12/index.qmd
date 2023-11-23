@@ -21,7 +21,6 @@ num_items <- 100 # rows are items , columns are features
 
 ```
 
-
 ```{r}
 
 #apply a function over a list or vector 
@@ -43,18 +42,22 @@ old <- 1:50
 new <-51:100
 
 
-#put old itsms in a memory matrix
+#put old items into a memory matrix
 
 memory <- items[old,]
 
 ```
 
+## get an item to probe memory
+
+```{r}
+
+
+probe_id <- 53
+
+probe <- items[probe_id,]
+
+```
 
 
 
-
-
-
-
-
-## Next Section
