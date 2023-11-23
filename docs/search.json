@@ -326,6 +326,20 @@
     "href": "posts/Week 12/index.html#section-i",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
     "section": "Section I",
-    "text": "Section I"
+    "text": "Section I\n\nvector_length &lt;- 10  #make random feature vectors for each item\nnum_items &lt;- 100 # rows are items , columns are features\n\n\n#apply a function over a list or vector \n# use replicate for random number generation?\n\n#sample with or without replacement\nitems &lt;- t(replicate(num_items,\n                     sample( rep(c(1,-1), vector_length / 2)\n                     )\n))"
+  },
+  {
+    "objectID": "posts/Week 12/index.html#memory-matrix",
+    "href": "posts/Week 12/index.html#memory-matrix",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
+    "section": "Memory Matrix",
+    "text": "Memory Matrix\n\n#define indices for old and new items\nold &lt;- 1:50\nnew &lt;-51:100\n\n\n#put old itsms in a memory matrix\n\nmemory &lt;- items[old,]"
+  },
+  {
+    "objectID": "posts/Week 12/index.html#next-section",
+    "href": "posts/Week 12/index.html#next-section",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
+    "section": "Next Section",
+    "text": "Next Section"
   }
 ]

@@ -4,8 +4,6 @@ author: "C Miller"
 date: "2023-12-7"
 ---
 
-
-
 ## A Minerva Model in R
 
 ```{r, echo=FALSE}
@@ -14,10 +12,49 @@ devtools::install_github("CrumpLab/RsemanticLibrarian")
 library(lsa)
 ```
 
-
 ## Section I
 
 ```{r}
 
+vector_length <- 10  #make random feature vectors for each item
+num_items <- 100 # rows are items , columns are features
 
 ```
+
+
+```{r}
+
+#apply a function over a list or vector 
+# use replicate for random number generation?
+
+#sample with or without replacement
+items <- t(replicate(num_items,
+                     sample( rep(c(1,-1), vector_length / 2)
+                     )
+))
+
+```
+
+## Memory Matrix
+
+```{r}
+#define indices for old and new items
+old <- 1:50
+new <-51:100
+
+
+#put old itsms in a memory matrix
+
+memory <- items[old,]
+
+```
+
+
+
+
+
+
+
+
+
+## Next Section
