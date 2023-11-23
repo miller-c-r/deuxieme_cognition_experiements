@@ -232,27 +232,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#matrix items has 100 items in it</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>probe_id <span class="ot">&lt;-</span> <span class="dv">53</span> <span class="co">#all items in certain number,, then calculate the similarity to "memory"</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>probe_id <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="co">#all items in certain number,, then calculate the similarity to "memory"</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>probe <span class="ot">&lt;-</span> items[probe_id,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="similarity-driven-retrieval-test-phase" class="level3">
 <h3 class="anchored" data-anchor-id="similarity-driven-retrieval-test-phase">similarity driven retrieval / test phase?</h3>
+<section id="activate-memory-traces-in-proportion-to-their-similarities.-for-each-of-the-rows-in-the-memory-matrix-multiply-all-the-values-by-their-similarity-to-the-q" class="level5">
+<h5 class="anchored" data-anchor-id="activate-memory-traces-in-proportion-to-their-similarities.-for-each-of-the-rows-in-the-memory-matrix-multiply-all-the-values-by-their-similarity-to-the-q">Activate memory traces in proportion to their similarities. for each of the rows in the memory matrix, multiply all the values by their similarity to the Q</h5>
+</section>
+<section id="this-will-create-a-new-matrix-of-activation.-some-numbers-have-become-very-small-so-those-memory-traces-have-not-been-activated." class="level5">
+<h5 class="anchored" data-anchor-id="this-will-create-a-new-matrix-of-activation.-some-numbers-have-become-very-small-so-those-memory-traces-have-not-been-activated.">this will create a new matrix of activation. Some numbers have become very small so those memory traces have not been activated.</h5>
+</section>
+<section id="calculate-two-main-output-parameters-of-the-matrix" class="level5">
+<h5 class="anchored" data-anchor-id="calculate-two-main-output-parameters-of-the-matrix">calculate two main output parameters of the matrix</h5>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#compute similarities</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>similarities <span class="ot">&lt;-</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  RsemanticLibrarian<span class="sc">::</span><span class="fu">cosine_x_to_m</span>(probe, memory)<span class="sc">^</span><span class="dv">5</span> <span class="co">#computes similarity between one vector and mutiple vectors in a matrix</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  RsemanticLibrarian<span class="sc">::</span><span class="fu">cosine_x_to_m</span>(probe, memory)<span class="sc">^</span><span class="dv">5</span> <span class="co">#computes similarity between one vector and multiple vectors in a matrix</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#activate traces by weighted similarity</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>activations <span class="ot">&lt;-</span> memory <span class="sc">*</span> <span class="fu">c</span>(similarities)</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the echo response and global activation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the echo response and global activation</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>echo <span class="ot">&lt;-</span> <span class="fu">colSums</span>(activations)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>global_activation <span class="ot">&lt;-</span> <span class="fu">sum</span>(similarities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="can-compare-the-pattern-for-echo-to-the-pattern-that-was-in-the-probe-using-lsa-cosine-function." class="level5">
+<h5 class="anchored" data-anchor-id="can-compare-the-pattern-for-echo-to-the-pattern-that-was-in-the-probe-using-lsa-cosine-function.">can compare the pattern for echo to the pattern that was in the probe using lsa cosine function.</h5>
+</section>
+<section id="range--1-1.-negative-1-is-inverse-zero-is-no-similarity-positive-1-perfect-and-positive-similarity." class="level5">
+<h5 class="anchored" data-anchor-id="range--1-1.-negative-1-is-inverse-zero-is-no-similarity-positive-1-perfect-and-positive-similarity.">Range: -1 , 1. Negative 1 is inverse, Zero is no similarity, Positive 1 perfect and positive similarity.</h5>
+</section>
+</section>
+</section>
+<section id="compare-echo-to-probe" class="level2">
+<h2 class="anchored" data-anchor-id="compare-echo-to-probe">Compare Echo to Probe</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lsa<span class="sc">::</span><span class="fu">cosine</span>(probe,echo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]
+[1,] 0.9897414</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>global_activation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.76736</code></pre>
+</div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

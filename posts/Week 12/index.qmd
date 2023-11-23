@@ -56,7 +56,7 @@ memory <- items[old,] # the first 50 items
 
 #matrix items has 100 items in it
 
-probe_id <- 53 #all items in certain number,, then calculate the similarity to "memory"
+probe_id <- 5 #all items in certain number,, then calculate the similarity to "memory"
 
 probe <- items[probe_id,]
 
@@ -64,12 +64,19 @@ probe <- items[probe_id,]
 
 ### similarity driven retrieval / test phase?
 
+
+##### Activate memory traces in proportion to their similarities. for each of the rows in the memory matrix, multiply all the values by their similarity to the Q
+
+##### this will create a new matrix of activation. Some numbers have become very small so those memory traces have not been activated.
+
+##### calculate two main output parameters of the matrix
+
 ```{r}
 
 #compute similarities
 
 similarities <-
-  RsemanticLibrarian::cosine_x_to_m(probe, memory)^5 #computes similarity between one vector and mutiple vectors in a matrix
+  RsemanticLibrarian::cosine_x_to_m(probe, memory)^5 #computes similarity between one vector and multiple vectors in a matrix
 
 #activate traces by weighted similarity
 
@@ -77,5 +84,29 @@ activations <- memory * c(similarities)
 
 #calculate the echo response and global activation
 
+echo <- colSums(activations)
+
+global_activation <- sum(similarities)
 
 ```
+
+
+##### can compare the pattern for echo to the pattern that was in the probe using lsa cosine function.
+##### Range: -1  , 1. Negative 1 is inverse, Zero is no similarity, Positive 1 perfect and positive similarity.
+
+
+## Compare Echo to Probe
+
+
+```{r}
+
+lsa::cosine(probe,echo)
+global_activation
+
+
+```
+
+
+
+
+

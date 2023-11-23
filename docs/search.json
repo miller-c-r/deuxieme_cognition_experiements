@@ -347,6 +347,13 @@
     "href": "posts/Week 12/index.html#get-an-item-to-probe-memory",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
     "section": "get an item to probe memory",
-    "text": "get an item to probe memory\n\n# each row of the matrix codes a memory trace\n\n#matrix items has 100 items in it\n\nprobe_id &lt;- 53 #all items in certain number,, then calculate the similarity to \"memory\"\n\nprobe &lt;- items[probe_id,]\n\n\nsimilarity driven retrieval / test phase?\n\n#compute similarities\n\nsimilarities &lt;-\n  RsemanticLibrarian::cosine_x_to_m(probe, memory)^5 #computes similarity between one vector and mutiple vectors in a matrix\n\n#activate traces by weighted similarity\n\nactivations &lt;- memory * c(similarities)\n\n#calculate the echo response and global activation"
+    "text": "get an item to probe memory\n\n# each row of the matrix codes a memory trace\n\n#matrix items has 100 items in it\n\nprobe_id &lt;- 5 #all items in certain number,, then calculate the similarity to \"memory\"\n\nprobe &lt;- items[probe_id,]\n\n\nsimilarity driven retrieval / test phase?\n\nActivate memory traces in proportion to their similarities. for each of the rows in the memory matrix, multiply all the values by their similarity to the Q\n\n\nthis will create a new matrix of activation. Some numbers have become very small so those memory traces have not been activated.\n\n\ncalculate two main output parameters of the matrix\n\n#compute similarities\n\nsimilarities &lt;-\n  RsemanticLibrarian::cosine_x_to_m(probe, memory)^5 #computes similarity between one vector and multiple vectors in a matrix\n\n#activate traces by weighted similarity\n\nactivations &lt;- memory * c(similarities)\n\n#calculate the echo response and global activation\n\necho &lt;- colSums(activations)\n\nglobal_activation &lt;- sum(similarities)\n\n\n\ncan compare the pattern for echo to the pattern that was in the probe using lsa cosine function.\n\n\nRange: -1 , 1. Negative 1 is inverse, Zero is no similarity, Positive 1 perfect and positive similarity."
+  },
+  {
+    "objectID": "posts/Week 12/index.html#compare-echo-to-probe",
+    "href": "posts/Week 12/index.html#compare-echo-to-probe",
+    "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve",
+    "section": "Compare Echo to Probe",
+    "text": "Compare Echo to Probe\n\nlsa::cosine(probe,echo)\n\n          [,1]\n[1,] 0.9897414\n\nglobal_activation\n\n[1] 0.76736"
   }
 ]
