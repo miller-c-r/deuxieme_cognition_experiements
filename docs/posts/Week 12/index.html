@@ -9,7 +9,7 @@
 <meta name="author" content="C Miller">
 <meta name="dcterms.date" content="2023-12-07">
 
-<title>Cognitive Psychology Experiments Using jsPsych - A Weekly Cognitive Psychology Blog: Week Number Twelve</title>
+<title>Cognitive Psychology Experiments Using jsPsych - A Weekly Cognitive Psychology Blog: Week Number Twelve Part I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Weekly Cognitive Psychology Blog: Week Number Twelve</h1>
+      <h1 class="title">A Weekly Cognitive Psychology Blog: Week Number Twelve Part I</h1>
                       </div>
   </div>
     
@@ -176,8 +176,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="a-minerva-model-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="a-minerva-model-in-r">A Minerva Model in R</h2>
+<section id="intro-to-a-minerva-model-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="intro-to-a-minerva-model-in-r">Intro to A Minerva Model in R</h2>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: usethis</code></pre>
@@ -274,14 +274,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="compare-echo-to-probe" class="level2">
 <h2 class="anchored" data-anchor-id="compare-echo-to-probe">Compare Echo to Probe</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lsa<span class="sc">::</span><span class="fu">cosine</span>(probe,echo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lsa<span class="sc">::</span><span class="fu">cosine</span>(probe,echo) <span class="do">## output value is a range from Negative 1 to Positive 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          [,1]
-[1,] 0.9897414</code></pre>
+[1,] 0.9891535</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>global_activation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># is pattern in probe similar to pattern in echo</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>global_activation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.76736</code></pre>
+<pre><code>[1] 1.30816</code></pre>
 </div>
 </div>
 

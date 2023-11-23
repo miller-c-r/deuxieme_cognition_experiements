@@ -1,10 +1,10 @@
 ---
-title:  "A Weekly Cognitive Psychology Blog: Week Number Twelve"
+title:  "A Weekly Cognitive Psychology Blog: Week Number Twelve Part I"
 author: "C Miller"
 date: "2023-12-7"
 ---
 
-## A Minerva Model in R
+## Intro to A Minerva Model in R
 
 ```{r, echo=FALSE}
 library(devtools)
@@ -64,7 +64,6 @@ probe <- items[probe_id,]
 
 ### similarity driven retrieval / test phase?
 
-
 ##### Activate memory traces in proportion to their similarities. for each of the rows in the memory matrix, multiply all the values by their similarity to the Q
 
 ##### this will create a new matrix of activation. Some numbers have become very small so those memory traces have not been activated.
@@ -90,13 +89,11 @@ global_activation <- sum(similarities)
 
 ```
 
-
 ##### can compare the pattern for echo to the pattern that was in the probe using lsa cosine function.
-##### Range: -1  , 1. Negative 1 is inverse, Zero is no similarity, Positive 1 perfect and positive similarity.
 
+##### Range: -1 , 1. Negative 1 is inverse, Zero is no similarity, Positive 1 perfect and positive similarity.
 
 ## Compare Echo to Probe
-
 
 ```{r}
 
@@ -108,12 +105,3 @@ global_activation
 
 
 ```
-
-
-
-
-
-
-
-
-
