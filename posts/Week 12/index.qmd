@@ -38,26 +38,44 @@ items <- t(replicate(num_items,
 
 ```{r}
 #define indices for old and new items
-old <- 1:50
-new <-51:100
+old <- 1:50  # encoding phase "old"
+new <-51:100 # the model did not see this sequence from 51-100 of "new items"
 
 
 #put old items into a memory matrix
 
-memory <- items[old,]
+#the memory of the model is a matrix
+memory <- items[old,] # the first 50 items
 
 ```
 
 ## get an item to probe memory
 
 ```{r}
+# each row of the matrix codes a memory trace
 
+#matrix items has 100 items in it
 
-probe_id <- 53
+probe_id <- 53 #all items in certain number,, then calculate the similarity to "memory"
 
 probe <- items[probe_id,]
 
 ```
 
+### similarity driven retrieval / test phase?
+
+```{r}
+
+#compute similarities
+
+similarities <-
+  RsemanticLibrarian::cosine_x_to_m(probe, memory)^5 #computes similarity between one vector and mutiple vectors in a matrix
+
+#activate traces by weighted similarity
+
+activations <- memory * c(similarities)
+
+#calculate the echo response and global activation
 
 
+```
