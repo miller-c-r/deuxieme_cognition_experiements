@@ -100,11 +100,18 @@ global_activation <- sum(similarities)
 
 ```{r}
 
-lsa::cosine(probe,echo)
+lsa::cosine(probe,echo) ## output value is a range from Negative 1 to Positive 1
+
+# is pattern in probe similar to pattern in echo
+
 global_activation
 
 
 ```
+
+
+
+
 
 
 
