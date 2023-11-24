@@ -146,3 +146,31 @@ simulation_means <- simulation_data %>%
 
 knitr::kable(simulation_means)
 ```
+
+
+## NOTES
+
+### Anticipated Results
+ 
+#### OLD Items
+
+##### mean echo similarity for old items Should be close to 1
+
+#### mean global activation for old items Should be close to 1
+
+#### New Items
+
+### mean echo similarity for new items should be smaller than mean echo cue similarity of OLD items
+
+### mean global acitvation for new items should be close to zero
+
+
+
+##### Old item types with close to 1 mean echo cue similarity with close to 1 mean global activation: each of those items was in the memory system at least one time so should expect at least one item to be strongly activated
+
+
+##### The echos resemble the cue. The echos are made up of traces in the memory.
+
+
+##### New traces global activation is low. the items are not exactly the same as the cue for the new item. Mean similarity is not 0, so the cue that the memory has never seen but prompts memory to activate traces but the echo resembles pattern in the cue.
+
