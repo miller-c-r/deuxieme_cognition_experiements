@@ -2,6 +2,7 @@
 title:  "A Weekly Cognitive Psychology Blog: Week Number Twelve Part I"
 author: "C Miller"
 date: "2023-12-7"
+image: "IMG_1784.JPG"
 ---
 
 ## Intro to A Minerva Model in R

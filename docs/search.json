@@ -354,7 +354,7 @@
     "href": "posts/Week 12/index.html#compare-echo-to-probe",
     "title": "A Weekly Cognitive Psychology Blog: Week Number Twelve Part I",
     "section": "Compare Echo to Probe",
-    "text": "Compare Echo to Probe\n\nlsa::cosine(probe,echo) ## output value is a range from Negative 1 to Positive 1\n\n          [,1]\n[1,] 0.9891535\n\n# is pattern in probe similar to pattern in echo\n\nglobal_activation\n\n[1] 1.30816"
+    "text": "Compare Echo to Probe\n\nlsa::cosine(probe,echo) ## output value is a range from Negative 1 to Positive 1\n\n          [,1]\n[1,] 0.9883914\n\n# is pattern in probe similar to pattern in echo\n\nglobal_activation\n\n[1] 1.0784"
   },
   {
     "objectID": "posts/Week 12/index.html#intro-to-a-minerva-model-in-r",

@@ -2,27 +2,22 @@
 title:  "A Weekly Cognitive Psychology Blog: Week Number Twelve Part II"
 author: "C Miller"
 date: "2023-12-7"
+image: "IMG_1784.JPG"
 ---
 
-
-
-
 #### Logic
+
 ##### Minerva assigns lower values to probes that are "new"
 
 ## 1. Create 100 unique feature vectors
 
 ## 2. Create a memory that gets the first 50 items as traces in the memory
 
-  ### mimics the encoding phase
+\### mimics the encoding phase
 
 ## 3. Conduct a simulation to mimic a memory test. Presenting new and old items as cues and generating responses from the memory
 
 ## 4. Evaluate the models' performance to see if it can discriminate between new and old items
-
-
-
-
 
 ```{r, echo=FALSE, include=FALSE}
 
@@ -34,9 +29,6 @@ library(RsemanticLibrarian)
 
 ```
 
-
-
-
 ```{r}
 
 vector_length <- 20  #make random feature vectors for each item
@@ -46,11 +38,7 @@ num_items <- 100
 
 ```
 
-
-
-
 ### A FUNCTION TO GENERATE SETS OF FEATURE VECTORS THAT ARE ALL UNIQUE
-
 
 ```{r}
 
@@ -72,9 +60,6 @@ upper_triangle <- correlation_matrix[upper.tri(correlation_matrix)]
 
 
 ```
-
-
-
 
 ```{r}
 
@@ -110,10 +95,7 @@ memory <- items[old,] # the first 50 items
 
 #### Get an analysis of how the model responded to new and old items and averages across items.
 
-
-###### loop over cues  
-
-
+###### loop over cues
 
 ```{r}
 
@@ -150,7 +132,6 @@ RsemanticLibrarian::cosine_x_to_m(probe, memory)^3
 
 ```
 
-
 ```{r, echo=FALSE, include=FALSE}
 
 
@@ -163,26 +144,3 @@ glimpse(simulation_data)
 
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
