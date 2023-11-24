@@ -13,7 +13,7 @@ image: "IMG_1784.JPG"
 
 ## 2. Create a memory that gets the first 50 items as traces in the memory
 
-\### mimics the encoding phase
+### mimics the encoding phase
 
 ## 3. Conduct a simulation to mimic a memory test. Presenting new and old items as cues and generating responses from the memory
 
@@ -135,12 +135,14 @@ RsemanticLibrarian::cosine_x_to_m(probe, memory)^3
 ```{r, echo=FALSE, include=FALSE}
 
 
-#print(simulation_data)
-
-simulation_data
-
-glimpse(simulation_data)
+simulation_data <- simulation_data %>%
+  mutate(item_type = rep(c("old", "new"), each = 50))
 
 
+simulation_means <- simulation_data %>%
+  group_by(item_type) %>%
+  summarize(mean_echo_cue_similarity = mean(echo_cue_similarity), mean_global_activation = mean(global_activation))
 
+
+knitr::kable(simulation_means)
 ```
