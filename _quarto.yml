@@ -6,7 +6,7 @@ project:
     - "jspsych/"
     - "farm/"
 website:
-  title: "Cognitive Psychology Experiments Using jsPsych"
+  title: "Undergrad Cognitive Psychology Experiments Using jsPsych"
   navbar:
     left:
       - about.qmd
