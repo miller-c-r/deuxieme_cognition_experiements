@@ -5,3 +5,184 @@ date: "2023-12-7"
 ---
 
 
+
+
+#### Logic
+##### Minerva assigns lower values to probes that are "new"
+
+## 1. Create 100 unique feature vectors
+
+## 2. Create a memory that gets the first 50 items as traces in the memory
+
+  ### mimics the encoding phase
+
+## 3. Conduct a simulation to mimic a memory test. Presenting new and old items as cues and generating responses from the memory
+
+## 4. Evaluate the models' performance to see if it can discriminate between new and old items
+
+
+
+
+
+```{r, echo=FALSE, include=FALSE}
+
+library(tidyverse)
+library(lsa)
+library(RsemanticLibrarian)
+
+
+
+```
+
+
+
+
+```{r}
+
+vector_length <- 20  #make random feature vectors for each item
+num_items <- 100 
+# rows are items
+#columns are features
+
+```
+
+
+
+
+### A FUNCTION TO GENERATE SETS OF FEATURE VECTORS THAT ARE ALL UNIQUE
+
+
+```{r}
+
+generate_unique_random_items <- function(num_items = 100, vector_length = 20){
+  items <- t(replicate(num_items,
+                       sample(rep(c(1,-1), vector_length/2
+                                ))))
+  
+  correlation_matrix <- cor(t(items))
+upper_triangle <- correlation_matrix[upper.tri(correlation_matrix)]
+
+  if (length(upper_triangle[upper_triangle == 1]) == 0){
+    return(items)
+  }   else{
+      print(i)
+      generate_unique_random_items(num_items, vector_length)
+  }
+}
+
+
+```
+
+
+
+
+```{r}
+
+#apply a function over a list or vector 
+# use replicate for random number generation?
+
+
+
+
+#sample with or without replacement
+items <- items <- generate_unique_random_items(num_items = 100, vector_length = 20)
+                     
+```
+
+## Memory Matrix
+
+```{r}
+#define indices for old and new items
+old <- 1:50  # encoding phase "old"
+new <-51:100 # the model did not see this sequence from 51-100 of "new items"
+
+
+#put old items into a memory matrix as above
+
+# hold items in a data frame
+
+simulation_data <- data.frame()
+
+#the memory of the model is a matrix
+memory <- items[old,] # the first 50 items
+
+```
+
+#### Get an analysis of how the model responded to new and old items and averages across items.
+
+
+###### loop over cues  
+
+
+
+```{r}
+
+for(i in 1:100){
+  probe_id <- i
+  probe <- items[probe_id,]
+  
+  #compute similarities
+  
+  similarities <-
+RsemanticLibrarian::cosine_x_to_m(probe, memory)^3
+  
+  #activate traces by weighted similarity
+  
+  activations <- memory * c(similarities)
+  
+  
+  # generate echo and global activation
+  
+  echo <- colSums(activations)
+  global_activation <- sum(similarities)
+  
+  # compare echo to probe
+  echo_cue_similarity <- lsa::cosine(probe, echo)
+  
+  trial_results <- data.frame(item = i, global_activation = global_activation, echo_cue_similarity = echo_cue_similarity)
+  
+ # per trial when a certain item was the cue how many items were activated what was the global activation
+  simulation_data <- rbind(simulation_data, trial_results)
+}
+
+
+
+
+```
+
+
+```{r, echo=FALSE, include=FALSE}
+
+
+#print(simulation_data)
+
+simulation_data
+
+glimpse(simulation_data)
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
