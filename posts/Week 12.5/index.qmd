@@ -152,9 +152,6 @@ RsemanticLibrarian::cosine_x_to_m(probe, memory)^3
 
 
 
-```
-
-```{r, echo=FALSE, include=FALSE}
 
 
 simulation_data <- simulation_data %>%
@@ -167,4 +164,18 @@ simulation_means <- simulation_data %>%
 
 
 knitr::kable(simulation_means)
+
+
+
+
+
+```
+
+
+
+```{r, echo=FALSE, include=FALSE}
+
+
+#deleted code chunk
+
 ```
