@@ -5,8 +5,6 @@ date: "2023-12-7"
 image: "IMG_1784.JPG"
 ---
 
-
-
 ## 1. Create 100 unique feature vectors
 
 ## 2. Create a memory that gets the first 50 items as traces in the memory
@@ -16,9 +14,6 @@ image: "IMG_1784.JPG"
 ## 3. Conduct a simulation to mimic a memory test. Presenting new and old items as cues and generating responses from the memory
 
 ## 4. Evaluate the models' performance to see if it can discriminate between new and old items
-
-
-
 
 ## NOTES
 
@@ -44,8 +39,7 @@ image: "IMG_1784.JPG"
 
 ##### The echos resemble the cue. The echos are made up of traces in the memory.
 
-##### New traces global activation is low. The items are not exactly the same as the cue for the new item. Mean similarity is not 0, so the cue that the memory has never seen  prompts memory to activate traces and the echo resembles pattern in the cue.
-
+##### New traces global activation is low. The items are not exactly the same as the cue for the new item. Mean similarity is not 0, so the cue that the memory has never seen prompts memory to activate traces and the echo resembles pattern in the cue.
 
 ```{r, echo=FALSE, include=FALSE}
 
@@ -174,5 +168,3 @@ simulation_means <- simulation_data %>%
 
 knitr::kable(simulation_means)
 ```
-
-
